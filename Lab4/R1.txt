@@ -1,0 +1,1095 @@
+     +--------------------------------------------------------------------+
+     ¦                • MobaXterm Personal Edition v21.4 •                ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.0.115:0.0                         ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦ • Important:                                                       ¦
+     ¦ This is MobaXterm Personal Edition. The Professional edition       ¦
+     ¦ allows you to customize MobaXterm for your company: you can add    ¦
+     ¦ your own logo, your parameters, your welcome message and generate  ¦
+     ¦ either an MSI installation package or a portable executable.       ¦
+     ¦ We can also modify MobaXterm or develop the plugins you need.      ¦
+     ¦ For more information: https://mobaxterm.mobatek.net/download.html  ¦
+     +--------------------------------------------------------------------+
+
+ ? 18/12/2021 ? ? 16:07.33 ? ? /home/mobaxterm ? telnet -e# 10.14.0.222 42401
+Telnet escape character is '#'.
+Trying 10.14.0.222...
+Connected to 10.14.0.222.
+Escape character is '#'.
+Connected to Dynamips VM "R1" (ID 2, type c3600) - Console port
+Press ENTER to get the prompt.
+ROMMON emulation microcode.
+
+                           Launching IOS image at 0x80008000...
+
+                                                               Smart Init is disabled. IOMEM set to: 5
+
+                                                                                                        Using iomem percentage: 5
+
+              Restricted Rights Legend
+
+Use, duplication, or disclosure by the Government is
+subject to restrictions as set forth in subparagraph
+(c) of the Commercial Computer Software - Restricted
+Rights clause at FAR sec. 52.227-19 and subparagraph
+(c) (1) (ii) of the Rights in Technical Data and Computer
+Software clause at DFARS sec. 252.227-7013.
+
+           cisco Systems, Inc.
+           170 West Tasman Drive
+           San Jose, California 95134-1706
+
+
+
+Cisco IOS Software, 3600 Software (C3640-A3JS-M), Version 12.4(25d), RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2010 by Cisco Systems, Inc.
+Compiled Wed 18-Aug-10 06:58 by prod_rel_team
+
+Cisco 3640 (R4700) processor (revision 0xFF) with 124928K/6144K bytes of memory.
+Processor board ID FF1045C5
+R4700 CPU at 100MHz, Implementation 33, Rev 1.2
+4 Ethernet interfaces
+DRAM configuration is 64 bits wide with parity enabled.
+125K bytes of NVRAM.
+8192K bytes of processor board System flash (Read/Write)
+
+SETUP: new interface Ethernet0/0 placed in "shutdown" state
+SETUP: new interface Ethernet0/1 placed in "shutdown" state
+SETUP: new interface Ethernet0/2 placed in "shutdown" state
+SETUP: new interface Ethernet0/3 placed in "shutdown" state
+% There may not be enough space available to collect the complete crashinfo
+% It would be advisable to have 280755 bytes free space on flash:crashinfo
+
+
+Press RETURN to get started!
+
+
+*Mar  1 00:00:11.103: %LINEPROTO-5-UPDOWN: Line protocol on Interface VoIP-Null0, changed state to up
+*Mar  1 00:00:11.107: %LINK-3-UPDOWN: Interface Ethernet0/0, changed state to up
+*Mar  1 00:00:11.115: %LINK-3-UPDOWN: Interface Ethernet0/1, changed state to up
+*Mar  1 00:00:11.119: %LINK-3-UPDOWN: Interface Ethernet0/2, changed state to up
+*Mar  1 00:00:11.127: %LINK-3-UPDOWN: Interface Ethernet0/3, changed state to up
+*Mar  1 00:00:11.131: %LINEPROTO-5-UPDOWN: Line protocol on Interface IPv6-mpls, changed state to up
+*Mar  1 00:00:11.863: %SYS-5-CONFIG_I: Configured from memory by console
+*Mar  1 00:00:12.223: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/0, changed state to down
+*Mar  1 00:00:12.223: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/1, changed state to down
+*Mar  1 00:00:12.227: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/2, changed state to down
+*Mar  1 00:00:12.231: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/3, changed state to down
+*Mar  1 00:00:12.627: %SYS-5-RESTART: System restarted --
+Cisco IOS Software, 3600 Software (C3640-A3JS-M), Version 12.4(25d), RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2010 by Cisco Systems, Inc.
+Compiled Wed 18-Aug-10 06:58 by prod_rel_team
+*Mar  1 00:00:12.659: %SNMP-5-COLDSTART: SNMP agent on host R1 is undergoing a cold start
+*Mar  1 00:00:13.867: %LINK-5-CHANGED: Interface Ethernet0/0, changed state to administratively down
+*Mar  1 00:00:13.875: %LINK-5-CHANGED: Interface Ethernet0/1, changed state to administratively down
+*Mar  1 00:00:13.883: %LINK-5-CHANGED: Interface Ethernet0/2, changed state to administratively down
+*Mar  1 00:00:13.891: %LINK-5-CHANGED: Interface Ethernet0/3, changed state to administratively down 2021-12-18 17:00:05 lNSbMnamq2u6ZXwp
+R1#
+R1#
+R1#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#int ethernet 0/0
+R1(config-if)#ip address 10.0.12.1 255.255.255.252
+R1(config-if)#int Loopback0
+R1(config-if)#ip a
+*Mar  1 00:02:44.935: %LINEPROTO-5-UPDOWN: Line protocol on Interface Loopback0, changed state to up
+R1(config-if)#ip address 1.1.1.1 255.255.255.255
+R1(config-if)#int ethernet 0/0
+R1(config-if)#no shutdown
+R1(config-if)#
+*Mar  1 00:03:10.667: %LINK-3-UPDOWN: Interface Ethernet0/0, changed state to up
+*Mar  1 00:03:11.667: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/0, changed state to up
+R1(config-if)#do show IP int brief
+Interface                  IP-Address      OK? Method Status                Protocol
+Ethernet0/0                10.0.12.1       YES manual up                    up
+Ethernet0/1                unassigned      YES unset  administratively down down
+Ethernet0/2                unassigned      YES unset  administratively down down
+Ethernet0/3                unassigned      YES unset  administratively down down
+Loopback0                  1.1.1.1         YES manual up                    up
+R1(config-if)#do show cdp neighbor
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+R2               Eth 0/0            172        R S I      3640      Eth 0/0
+R1(config-if)#do show cdp neighbor detail
+-------------------------
+Device ID: R2
+Entry address(es):
+  IP address: 10.0.12.2
+Platform: Cisco 3640,  Capabilities: Router Switch IGMP
+Interface: Ethernet0/0,  Port ID (outgoing port): Ethernet0/0
+Holdtime : 163 sec
+
+Version :
+Cisco IOS Software, 3600 Software (C3640-A3JS-M), Version 12.4(25d), RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2010 by Cisco Systems, Inc.
+Compiled Wed 18-Aug-10 06:58 by prod_rel_team
+
+advertisement version: 2
+VTP Management Domain: ''
+Duplex: half
+
+R1(config-if)#router ospf
+% Incomplete command.
+
+R1(config)#router ospf 1
+R1(config-router)#network 10.0.12.1 0.0.0.3 area 0
+R1(config-router)#network 1.1.1.1 0.0.0.0 area 0
+R1(config-router)#
+*Mar  1 00:18:51.627: %OSPF-5-ADJCHG: Process 1, Nbr 2.2.2.2 on Ethernet0/0 from LOADING to FULL, Loading Done
+R1(config-router)#int ethernet 0/0/
+                                  ^
+% Invalid input detected at '^' marker.
+
+R1(config)#int ethernet 0/0
+R1(config-if)#ip ospf network point-to-point
+R1(config-if)#
+*Mar  1 00:23:20.835: %OSPF-5-ADJCHG: Process 1, Nbr 2.2.2.2 on Ethernet0/0 from FULL to DOWN, Neighbor Down: Interface down or detached
+*Mar  1 00:23:21.307: %OSPF-5-ADJCHG: Process 1, Nbr 2.2.2.2 on Ethernet0/0 from LOADING to FULL, Loading Done
+R1(config-if)#
+*Mar  1 00:23:51.623: %OSPF-5-ADJCHG: Process 1, Nbr 2.2.2.2 on Ethernet0/0 from LOADING to FULL, Loading Done
+R1(config-if)#exit
+R1(config)#exit
+R1#ping
+*Mar  1 00:26:28.719: %SYS-5-CONFIG_I: Configured from console by console
+R1#ping 2.2.2.2
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 2.2.2.2, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 20/50/112 ms
+R1#ping 3.3.3.3
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 3.3.3.3, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 36/65/92 ms
+R1#ping 4.4.4.4
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 4.4.4.4, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 20/60/104 ms
+R1#ping 5.5.5.5
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 5.5.5.5, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 76/88/100 ms
+R1#ping 10.0.24.2
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 10.0.24.2, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 44/56/68 ms
+R1#ping 10.0.23.2
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 10.0.23.2, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 24/44/56 ms
+R1#ping 10.0.35.2
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 10.0.35.2, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 64/84/96 ms
+R1#ping 10.0.34.2
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 10.0.34.2, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 32/51/72 ms
+R1#ping 10.0.45.2
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 10.0.45.2, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 60/92/132 ms
+R1#show ip ospf interface | include protocol|Cost
+Loopback0 is up, line protocol is up
+  Process ID 1, Router ID 1.1.1.1, Network Type LOOPBACK, Cost: 1
+Ethernet0/0 is up, line protocol is up
+  Process ID 1, Router ID 1.1.1.1, Network Type POINT_TO_POINT, Cost: 10
+R1#traceroute 5.5.5.5
+
+Type escape sequence to abort.
+Tracing the route to 5.5.5.5
+
+  1 10.0.12.2 144 msec 40 msec 24 msec
+  2 10.0.24.2 52 msec 28 msec 40 msec
+  3 10.0.45.2 300 msec 128 msec 76 msec
+R1#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#ip cef distributed
+                  ^
+% Invalid input detected at '^' marker.
+
+R1(config)#ip cef [distributed]
+                  ^
+% Invalid input detected at '^' marker.
+
+R1(config)#ip cef
+R1(config)#mpls ip
+R1(config)#int ethernet 0/0
+R1(config-if)#mpls ip
+R1(config-if)#exit
+R1(config)#
+*Mar  1 00:53:16.679: %LDP-5-NBRCHG: LDP Neighbor 2.2.2.2:0 (1) is UP
+R1(config)#do show mpls forwarding-table
+Local  Outgoing    Prefix            Bytes tag  Outgoing   Next Hop
+tag    tag or VC   or Tunnel Id      switched   interface
+16     Pop tag     2.2.2.2/32        0          Et0/0      10.0.12.2
+17     17          3.3.3.3/32        0          Et0/0      10.0.12.2
+18     18          4.4.4.4/32        0          Et0/0      10.0.12.2
+19     19          5.5.5.5/32        0          Et0/0      10.0.12.2
+20     Pop tag     10.0.24.0/30      0          Et0/0      10.0.12.2
+21     Pop tag     10.0.23.0/30      0          Et0/0      10.0.12.2
+22     20          10.0.45.0/30      0          Et0/0      10.0.12.2
+23     21          10.0.34.0/30      0          Et0/0      10.0.12.2
+24     22          10.0.35.0/30      0          Et0/0      10.0.12.2
+R1(config)#traceroute 5.5.5.5
+               ^
+% Invalid input detected at '^' marker.
+
+R1(config)#exit
+R1#traceroute 5.5.5.5
+*Mar  1 01:01:24.743: %SYS-5-CONFIG_I: Configured from console by console
+R1#traceroute 5.5.5.5
+
+Type escape sequence to abort.
+Tracing the route to 5.5.5.5
+
+  1 10.0.12.2 [MPLS: Label 19 Exp 0] 104 msec 56 msec 76 msec
+  2 10.0.24.2 [MPLS: Label 19 Exp 0] 60 msec 68 msec 76 msec
+  3 10.0.45.2 60 msec 44 msec 76 msec
+R1#onfig t
+   ^
+% Invalid input detected at '^' marker.
+
+R1#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#router ospf 1
+R1(config-router)#mpls traffic-eng area 0
+R1(config-router)#mpls traffic-eng router-id Loopback0
+R1(config-router)#exit
+R1(config)#mpls traffic-eng tunnels
+R1(config)#int ethernet 0/0
+R1(config-if)#mpls traffic-eng tunnels
+R1(config-if)#int ethernet 0/0
+R1(config-if)#ip rsvp bandwidth 512
+R1(config-if)#interface tunnel1
+R1(config-if)#
+*Mar  1 01:23:42.587: %LINEPROTO-5-UPDOWN: Line protocol on Interface Tunnel1, changed state to down
+R1(config-if)#mpls ip
+R1(config-if)#ip unnumbered Loopback0
+R1(config-if)#no ip directed-broadcast
+R1(config-if)#tunnel destination 5.5.5.5
+R1(config-if)#tunnel mode mpls traffic-eng
+R1(config-if)#tunnel mpls traffic-eng autoroute announce
+R1(config-if)#tunnel traffic-eng priority 5
+                      ^
+% Invalid input detected at '^' marker.
+
+R1(config-if)#tunnel mpls traffic-eng priority 5
+R1(config-if)#tunnel mpls traffic-eng bandwidth 256
+R1(config-if)#tunnel mpls traffic-eng path-option 2 dynamic
+R1(config-if)#
+*Mar  1 01:25:39.899: %LINEPROTO-5-UPDOWN: Line protocol on Interface Tunnel1, changed state to up
+R1(config-if)#
+*Mar  1 01:27:24.931: %LDP-5-NBRCHG: LDP Neighbor 5.5.5.5:0 (2) is UP
+R1(config-if)#do show mpls traffic-eng tunnels
+
+Name: R1_t1                               (Tunnel1) Destination: 5.5.5.5
+  Status:
+    Admin: up         Oper: up     Path: valid       Signalling: connected
+
+    path option 2, type dynamic (Basis for Setup, path weight 120)
+
+  Config Parameters:
+    Bandwidth: 256      kbps (Global)  Priority: 5  5   Affinity: 0x0/0xFFFF
+    Metric Type: TE (default)
+    AutoRoute:  enabled   LockDown: disabled  Loadshare: 256      bw-based
+    auto-bw: disabled
+
+  InLabel  :  -
+  OutLabel : Ethernet0/0, 23
+  RSVP Signalling Info:
+       Src 1.1.1.1, Dst 5.5.5.5, Tun_Id 1, Tun_Instance 3
+    RSVP Path Info:
+      My Address: 1.1.1.1
+      Explicit Route: 10.0.12.2 10.0.23.2 10.0.35.2 5.5.5.5
+      Record Route:  NONE
+      Tspec: ave rate=256 kbits, burst=1000 bytes, peak rate=256 kbits
+    RSVP Resv Info:
+      Record Route:  NONE
+      Fspec: ave rate=256 kbits, burst=1000 bytes, peak rate=256 kbits
+  History:
+    Tunnel:
+      Time since created: 3 minutes, 23 seconds
+      Time since path change: 2 minutes, 19 seconds
+    Current LSP:
+      Uptime: 2 minutes, 20 seconds
+    Prior LSP:
+      ID: path option 2 [2]
+      Removal Trigger: router ID changed
+
+LSP Tunnel R5_t1 is signalled, connection is up
+  InLabel  : Ethernet0/0, implicit-null
+  OutLabel :  -
+  RSVP Signalling Info:
+       Src 5.5.5.5, Dst 1.1.1.1, Tun_Id 1, Tun_Instance 3
+    RSVP Path Info:
+      My Address: 1.1.1.1
+      Explicit Route:  NONE
+      Record Route:  NONE
+      Tspec: ave rate=256 kbits, burst=1000 bytes, peak rate=256 kbits
+    RSVP Resv Info:
+      Record Route:  NONE
+      Fspec: ave rate=256 kbits, burst=1000 bytes, peak rate=256 kbits
+R1(config-if)#
+R1(config-if)#
+R1(config-if)#
+R1(config-if)#do show ip route
+Codes: C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route
+
+Gateway of last resort is not set
+
+     1.0.0.0/32 is subnetted, 1 subnets
+C       1.1.1.1 is directly connected, Loopback0
+     2.0.0.0/32 is subnetted, 1 subnets
+O       2.2.2.2 [110/11] via 10.0.12.2, 00:03:37, Ethernet0/0
+     3.0.0.0/32 is subnetted, 1 subnets
+O       3.3.3.3 [110/31] via 10.0.12.2, 00:03:37, Ethernet0/0
+     4.0.0.0/32 is subnetted, 1 subnets
+O       4.4.4.4 [110/21] via 10.0.12.2, 00:03:37, Ethernet0/0
+     5.0.0.0/32 is subnetted, 1 subnets
+O       5.5.5.5 [110/31] via 5.5.5.5, 00:03:37, Tunnel1
+     10.0.0.0/30 is subnetted, 6 subnets
+C       10.0.12.0 is directly connected, Ethernet0/0
+O       10.0.24.0 [110/20] via 10.0.12.2, 00:03:38, Ethernet0/0
+O       10.0.23.0 [110/110] via 10.0.12.2, 00:03:40, Ethernet0/0
+O       10.0.45.0 [110/30] via 10.0.12.2, 00:03:40, Ethernet0/0
+O       10.0.34.0 [110/30] via 10.0.12.2, 00:03:41, Ethernet0/0
+O       10.0.35.0 [110/40] via 10.0.12.2, 00:03:41, Ethernet0/0
+                  [110/40] via 5.5.5.5, 00:03:41, Tunnel1
+R1(config-if)#
+R1(config-if)#
+R1(config-if)#do show ip ospf interface
+Loopback0 is up, line protocol is up
+  Internet Address 1.1.1.1/32, Area 0
+  Process ID 1, Router ID 1.1.1.1, Network Type LOOPBACK, Cost: 1
+  Loopback interface is treated as a stub Host
+Tunnel1 is up, line protocol is up
+  Interface is unnumbered. Using address of Loopback0 (1.1.1.1), Area 0
+  Process ID 1, Router ID 1.1.1.1, Network Type POINT_TO_POINT, Cost: 11111
+  Transmit Delay is 1 sec, State POINT_TO_POINT
+  Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+    oob-resync timeout 40
+    No Hellos (Passive interface)
+  Supports Link-local Signaling (LLS)
+  Index 3/3, flood queue length 0
+  Next 0x0(0)/0x0(0)
+  Last flood scan length is 0, maximum is 0
+  Last flood scan time is 0 msec, maximum is 0 msec
+  Neighbor Count is 0, Adjacent neighbor count is 0
+  Suppress hello for 0 neighbor(s)
+Ethernet0/0 is up, line protocol is up
+  Internet Address 10.0.12.1/30, Area 0
+  Process ID 1, Router ID 1.1.1.1, Network Type POINT_TO_POINT, Cost: 10
+  Transmit Delay is 1 sec, State POINT_TO_POINT
+  Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+    oob-resync timeout 40
+    Hello due in 00:00:05
+  Supports Link-local Signaling (LLS)
+  Index 1/1, flood queue length 0
+  Next 0x0(0)/0x0(0)
+  Last flood scan length is 1, maximum is 1
+  Last flood scan time is 0 msec, maximum is 0 msec
+  Neighbor Count is 1, Adjacent neighbor count is 1
+    Adjacent with neighbor 2.2.2.2
+  Suppress hello for 0 neighbor(s)
+R1(config-if)#
+R1(config-if)#
+R1(config-if)#
+R1(config-if)#
+R1(config-if)#
+R1(config-if)#
+R1(config-if)#do show mpls forwarding-table
+Local  Outgoing    Prefix            Bytes tag  Outgoing   Next Hop
+tag    tag or VC   or Tunnel Id      switched   interface
+16     Pop tag     2.2.2.2/32        0          Et0/0      10.0.12.2
+17     17          3.3.3.3/32        0          Et0/0      10.0.12.2
+18     18          4.4.4.4/32        0          Et0/0      10.0.12.2
+19     Pop tag [T] 5.5.5.5/32        0          Tu1        point2point
+20     Pop tag     10.0.24.0/30      0          Et0/0      10.0.12.2
+21     Pop tag     10.0.23.0/30      0          Et0/0      10.0.12.2
+22     20          10.0.45.0/30      0          Et0/0      10.0.12.2
+23     21          10.0.34.0/30      0          Et0/0      10.0.12.2
+24     22          10.0.35.0/30      0          Et0/0      10.0.12.2
+       Pop tag [T] 10.0.35.0/30      0          Tu1        point2point
+
+[T]     Forwarding through a TSP tunnel.
+        View additional tagging info with the 'detail' option
+R1(config-if)#do show ip ospf database external 5.5.5.5
+
+            OSPF Router with ID (1.1.1.1) (Process ID 1)
+R1(config-if)#do show ip ospf database
+
+            OSPF Router with ID (1.1.1.1) (Process ID 1)
+
+                Router Link States (Area 0)
+
+Link ID         ADV Router      Age         Seq#       Checksum Link count
+1.1.1.1         1.1.1.1         329         0x80000006 0x008B31 3
+2.2.2.2         2.2.2.2         1045        0x8000000E 0x00955E 7
+3.3.3.3         3.3.3.3         1215        0x8000000D 0x004357 7
+4.4.4.4         4.4.4.4         110         0x8000000D 0x0031FE 7
+5.5.5.5         5.5.5.5         67          0x8000000B 0x00495B 5
+
+                Type-10 Opaque Link Area Link States (Area 0)
+
+Link ID         ADV Router      Age         Seq#       Checksum Opaque ID
+1.0.0.0         1.1.1.1         533         0x80000003 0x00C004 0
+1.0.0.0         2.2.2.2         434         0x80000003 0x004A76 0
+1.0.0.0         3.3.3.3         535         0x80000003 0x0085F4 0
+1.0.0.0         4.4.4.4         775         0x80000002 0x00A5FB 0
+1.0.0.0         5.5.5.5         436         0x80000003 0x00A0D1 0
+1.0.0.1         2.2.2.2         535         0x80000003 0x0056AB 1
+1.0.0.1         3.3.3.3         436         0x80000003 0x00DD24 1
+1.0.0.1         4.4.4.4         769         0x80000002 0x008178 1
+1.0.0.1         5.5.5.5         682         0x80000002 0x0009F0 1
+1.0.0.2         2.2.2.2         908         0x80000002 0x00CDEE 2
+1.0.0.2         3.3.3.3         868         0x80000002 0x006AAC 2
+1.0.0.2         4.4.4.4         756         0x80000002 0x00F125 2
+R1(config-if)#
+R1(config-if)#
+R1(config-if)#
+R1(config-if)#
+R1(config-if)#
+R1(config-if)#
+R1(config-if)#exit
+R1(config)#exit
+R1#trac
+*Mar  1 01:35:24.527: %SYS-5-CONFIG_I: Configured from console by console
+R1#traceroute 5.5.5.5
+
+Type escape sequence to abort.
+Tracing the route to 5.5.5.5
+
+  1 10.0.12.2 [MPLS: Label 23 Exp 0] 52 msec 40 msec 60 msec
+  2 10.0.23.2 [MPLS: Label 23 Exp 0] 80 msec 44 msec 76 msec
+  3 10.0.35.2 64 msec 48 msec 72 msec
+R1#do show mpls traffic-eng links
+      ^
+% Invalid input detected at '^' marker.
+
+R1#[~ show mpls traffic-eng links
+   ^
+% Invalid input detected at '^' marker.
+
+R1#show mpls traffic-eng links
+                             ^
+% Invalid input detected at '^' marker.
+
+R1#show mpls traffic-eng link
+% Incomplete command.
+
+R1#show ip mpls traffic-eng link
+             ^
+% Invalid input detected at '^' marker.
+
+R1#show ip ospf mpls traffic-eng link
+
+            OSPF Router with ID (1.1.1.1) (Process ID 1)
+
+  Area 0 has 1 MPLS TE links. Area instance is 5.
+
+  Links in hash bucket 8.
+    Link is associated with fragment 0. Link instance is 5
+      Link connected to Point-to-Point network
+      Link ID : 2.2.2.2
+      Interface Address : 10.0.12.1
+      Neighbor Address : 10.0.12.2
+      Admin Metric te: 10 igp: 10
+      Maximum bandwidth : 1250000
+      Maximum reservable bandwidth : 64000
+      Number of Priority : 8
+      Priority 0 : 64000       Priority 1 : 64000
+      Priority 2 : 64000       Priority 3 : 64000
+      Priority 4 : 64000       Priority 5 : 32000
+      Priority 6 : 32000       Priority 7 : 32000
+      Affinity Bit : 0x0
+R1#show mpls forwarding-table
+Local  Outgoing    Prefix            Bytes tag  Outgoing   Next Hop
+tag    tag or VC   or Tunnel Id      switched   interface
+16     Pop tag     2.2.2.2/32        0          Et0/0      10.0.12.2
+17     17          3.3.3.3/32        0          Et0/0      10.0.12.2
+18     18          4.4.4.4/32        0          Et0/0      10.0.12.2
+19     Pop tag [T] 5.5.5.5/32        0          Tu1        point2point
+20     Pop tag     10.0.24.0/30      0          Et0/0      10.0.12.2
+21     Pop tag     10.0.23.0/30      0          Et0/0      10.0.12.2
+22     20          10.0.45.0/30      0          Et0/0      10.0.12.2
+23     21          10.0.34.0/30      0          Et0/0      10.0.12.2
+24     22          10.0.35.0/30      0          Et0/0      10.0.12.2
+       Pop tag [T] 10.0.35.0/30      0          Tu1        point2point
+
+[T]     Forwarding through a TSP tunnel.
+        View additional tagging info with the 'detail' option
+R1#traceroute 5.5.5.5
+
+Type escape sequence to abort.
+Tracing the route to 5.5.5.5
+
+  1 10.0.12.2 [MPLS: Label 23 Exp 0] 40 msec 60 msec 64 msec
+  2 10.0.24.2 [MPLS: Label 23 Exp 0] 72 msec 48 msec 68 msec
+  3 10.0.45.2 64 msec 48 msec 72 msec
+R1#show mpls ip binding
+  1.1.1.1/32
+        in label:     imp-null
+        out label:    16        lsr: 2.2.2.2:0
+        out label:    16        lsr: 5.5.5.5:0
+  2.2.2.2/32
+        in label:     16
+        out label:    imp-null  lsr: 2.2.2.2:0        inuse
+        out label:    17        lsr: 5.5.5.5:0
+  3.3.3.3/32
+        in label:     17
+        out label:    17        lsr: 2.2.2.2:0        inuse
+        out label:    18        lsr: 5.5.5.5:0
+  4.4.4.4/32
+        in label:     18
+        out label:    18        lsr: 2.2.2.2:0        inuse
+        out label:    19        lsr: 5.5.5.5:0
+  5.5.5.5/32
+        in label:     19
+        out label:    19        lsr: 2.2.2.2:0
+        out label:    imp-null  lsr: 5.5.5.5:0        inuse
+  10.0.12.0/30
+        in label:     imp-null
+        out label:    imp-null  lsr: 2.2.2.2:0
+        out label:    20        lsr: 5.5.5.5:0
+  10.0.23.0/30
+        in label:     21
+        out label:    imp-null  lsr: 2.2.2.2:0        inuse
+        out label:    22        lsr: 5.5.5.5:0
+  10.0.24.0/30
+        in label:     20
+        out label:    imp-null  lsr: 2.2.2.2:0        inuse
+        out label:    21        lsr: 5.5.5.5:0
+  10.0.34.0/30
+        in label:     23
+        out label:    21        lsr: 2.2.2.2:0        inuse
+        out label:    23        lsr: 5.5.5.5:0
+  10.0.35.0/30
+        in label:     24
+        out label:    22        lsr: 2.2.2.2:0        inuse
+        out label:    imp-null  lsr: 5.5.5.5:0        inuse
+  10.0.45.0/30
+        in label:     22
+        out label:    20        lsr: 2.2.2.2:0        inuse
+        out label:    imp-null  lsr: 5.5.5.5:0
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#show ip traffic-eng routes
+                    ^
+% Invalid input detected at '^' marker.
+
+R1#show ip traffic-engineering routes
+                    ^
+% Invalid input detected at '^' marker.
+
+R1#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#show ip traffic-eng routes
+             ^
+% Invalid input detected at '^' marker.
+
+R1(config)#do show ip traffic-eng routes
+show ip traffic-eng routes
+                 ^
+% Invalid input detected at '^' marker.
+
+R1(config)#do show ip traffic-engineering routes
+show ip traffic-engineering routes
+                 ^
+% Invalid input detected at '^' marker.
+
+R1(config)#do show mpls forwarding-table detail
+Local  Outgoing    Prefix            Bytes tag  Outgoing   Next Hop
+tag    tag or VC   or Tunnel Id      switched   interface
+16     Pop tag     2.2.2.2/32        0          Et0/0      10.0.12.2
+        MAC/Encaps=14/14, MRU=1504, Tag Stack{}
+        CC035ED50000CC025ED500008847
+        No output feature configured
+    Per-packet load-sharing
+17     17          3.3.3.3/32        0          Et0/0      10.0.12.2
+        MAC/Encaps=14/18, MRU=1500, Tag Stack{17}
+        CC035ED50000CC025ED500008847 00011000
+        No output feature configured
+    Per-packet load-sharing
+18     18          4.4.4.4/32        0          Et0/0      10.0.12.2
+        MAC/Encaps=14/18, MRU=1500, Tag Stack{18}
+        CC035ED50000CC025ED500008847 00012000
+        No output feature configured
+    Per-packet load-sharing
+19     Pop tag     5.5.5.5/32        0          Tu1        point2point
+        MAC/Encaps=14/18, MRU=1500, Tag Stack{23}, via Et0/0
+        CC035ED50000CC025ED500008847 00017000
+        No output feature configured
+    Per-packet load-sharing
+20     Pop tag     10.0.24.0/30      0          Et0/0      10.0.12.2
+        MAC/Encaps=14/14, MRU=1504, Tag Stack{}
+        CC035ED50000CC025ED500008847
+        No output feature configured
+    Per-packet load-sharing
+21     Pop tag     10.0.23.0/30      0          Et0/0      10.0.12.2
+        MAC/Encaps=14/14, MRU=1504, Tag Stack{}
+        CC035ED50000CC025ED500008847
+        No output feature configured
+    Per-packet load-sharing
+22     20          10.0.45.0/30      0          Et0/0      10.0.12.2
+        MAC/Encaps=14/18, MRU=1500, Tag Stack{20}
+        CC035ED50000CC025ED500008847 00014000
+        No output feature configured
+    Per-packet load-sharing
+23     21          10.0.34.0/30      0          Et0/0      10.0.12.2
+        MAC/Encaps=14/18, MRU=1500, Tag Stack{21}
+        CC035ED50000CC025ED500008847 00015000
+        No output feature configured
+    Per-packet load-sharing
+24     22          10.0.35.0/30      0          Et0/0      10.0.12.2
+        MAC/Encaps=14/18, MRU=1500, Tag Stack{22}
+        CC035ED50000CC025ED500008847 00016000
+        No output feature configured
+    Per-destination load-sharing, slots: 0 2 4 6 8 10 12 14
+       Pop tag     10.0.35.0/30      0          Tu1        point2point
+        MAC/Encaps=14/18, MRU=1500, Tag Stack{23}, via Et0/0
+        CC035ED50000CC025ED500008847 00017000
+        No output feature configured
+    Per-destination load-sharing, slots: 1 3 5 7 9 11 13 15
+R1(config)#
+R1(config)#
+R1(config)#
+R1(config)#
+R1(config)#
+R1(config)#
+R1(config)#
+R1(config)#
+R1(config)#int tunnel1
+R1(config-if)#shutdown
+R1(config-if)#
+*Mar  1 01:52:09.011: %LDP-5-NBRCHG: LDP Neighbor 5.5.5.5:0 (2) is DOWN (TE interface disabled targeted session)
+R1(config-if)#
+*Mar  1 01:52:10.839: %LINK-5-CHANGED: Interface Tunnel1, changed state to administratively down
+*Mar  1 01:52:11.839: %LINEPROTO-5-UPDOWN: Line protocol on Interface Tunnel1, changed state to down
+R1(config-if)#int tunnel2
+R1(config-if)#
+*Mar  1 01:52:34.039: %LINEPROTO-5-UPDOWN: Line protocol on Interface Tunnel2, changed state to down
+R1(config-if)#mpls ip
+R1(config-if)#ipunnumbered Loopback0
+                ^
+% Invalid input detected at '^' marker.
+
+R1(config-if)#ip unnumbered Loopback0
+R1(config-if)#tunnel destination 5.5.5.5
+R1(config-if)#tunnel mode mpls traffic-eng
+R1(config-if)#tunnel mpls traffic-eng autoroute announce
+R1(config-if)#tunnel mpls traffic-eng priority 2
+R1(config-if)#tunnel mpls traffic-eng bandwidth 256
+R1(config-if)#tunnel mpls traffic-eng path-option 1 explicit name MyPath
+R1(config-if)#exit
+R1(config)#exit
+R1#
+*Mar  1 01:56:29.607: %SYS-5-CONFIG_I: Configured from console by console
+R1#traceroute 5.5.5.5
+
+Type escape sequence to abort.
+Tracing the route to 5.5.5.5
+
+  1 10.0.12.2 [MPLS: Label 19 Exp 0] 60 msec 60 msec 56 msec
+  2 10.0.24.2 [MPLS: Label 19 Exp 0] 76 msec 52 msec 72 msec
+  3 10.0.45.2 60 msec 48 msec 72 msec
+R1#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#do show IP int brief
+Interface                  IP-Address      OK? Method Status                Protocol
+Ethernet0/0                10.0.12.1       YES manual up                    up
+Ethernet0/1                unassigned      YES unset  administratively down down
+Ethernet0/2                unassigned      YES unset  administratively down down
+Ethernet0/3                unassigned      YES unset  administratively down down
+Loopback0                  1.1.1.1         YES manual up                    up
+Tunnel1                    1.1.1.1         YES TFTP   administratively down down
+Tunnel2                    1.1.1.1         YES TFTP   up                    down
+R1(config)#ip explicit-path name MyPath enable
+R1(cfg-ip-expl-path)#next address 10.0.12.2
+                                  ^
+% Invalid input detected at '^' marker.
+
+R1(cfg-ip-expl-path)#next-address 10.0.12.2
+Explicit Path name MyPath:
+    1: next-address 10.0.12.2
+R1(cfg-ip-expl-path)#next-address 10.0.23.2
+Explicit Path name MyPath:
+    1: next-address 10.0.12.2
+    2: next-address 10.0.23.2
+R1(cfg-ip-expl-path)#next-address 10.0.34.2
+Explicit Path name MyPath:
+    1: next-address 10.0.12.2
+    2: next-address 10.0.23.2
+    3: next-address 10.0.34.2
+R1(cfg-ip-expl-path)#next-address 10.0.45.2
+Explicit Path name MyPath:
+    1: next-address 10.0.12.2
+    2: next-address 10.0.23.2
+    3: next-address 10.0.34.2
+    4: next-address 10.0.45.2
+R1(cfg-ip-expl-path)#
+*Mar  1 02:03:14.943: %LINEPROTO-5-UPDOWN: Line protocol on Interface Tunnel2, changed state to up
+R1(cfg-ip-expl-path)#exit
+R1(config)#exit
+R1#trac
+*Mar  1 02:03:42.471: %SYS-5-CONFIG_I: Configured from console by console
+R1#traceroute 5.5.5.5
+
+Type escape sequence to abort.
+Tracing the route to 5.5.5.5
+
+  1 10.0.12.2 [MPLS: Label 23 Exp 0] 72 msec 56 msec 76 msec
+  2 10.0.23.2 [MPLS: Label 23 Exp 0] 56 msec 84 msec 52 msec
+  3 10.0.34.2 [MPLS: Label 23 Exp 0] 88 msec 60 msec 72 msec
+  4 10.0.45.2 60 msec 68 msec 72 msec
+R1#show mpls traffic-eng tunnels
+
+Name: R1_t1                               (Tunnel1) Destination: 5.5.5.5
+  Status:
+    Admin: admin-down Oper: down   Path: not valid   Signalling: Down
+    path option 2, type dynamic
+
+  Config Parameters:
+    Bandwidth: 256      kbps (Global)  Priority: 5  5   Affinity: 0x0/0xFFFF
+    Metric Type: TE (default)
+    AutoRoute:  enabled   LockDown: disabled  Loadshare: 256      bw-based
+    auto-bw: disabled
+
+  History:
+    Tunnel:
+      Time since created: 41 minutes, 14 seconds
+      Time since path change: 13 minutes, 40 seconds
+    Prior LSP:
+      ID: path option 2 [4]
+      Removal Trigger: tunnel shutdown
+
+Name: R1_t2                               (Tunnel2) Destination: 5.5.5.5
+  Status:
+    Admin: up         Oper: up     Path: valid       Signalling: connected
+
+    path option 1, type explicit MyPath (Basis for Setup, path weight 130)
+
+  Config Parameters:
+    Bandwidth: 256      kbps (Global)  Priority: 2  2   Affinity: 0x0/0xFFFF
+    Metric Type: TE (default)
+    AutoRoute:  enabled   LockDown: disabled  Loadshare: 256      bw-based
+    auto-bw: disabled
+
+  InLabel  :  -
+  OutLabel : Ethernet0/0, 23
+  RSVP Signalling Info:
+       Src 1.1.1.1, Dst 5.5.5.5, Tun_Id 2, Tun_Instance 12
+    RSVP Path Info:
+      My Address: 1.1.1.1
+      Explicit Route: 10.0.12.2 10.0.23.2 10.0.34.2 10.0.45.2
+                      5.5.5.5
+      Record Route:  NONE
+      Tspec: ave rate=256 kbits, burst=1000 bytes, peak rate=256 kbits
+    RSVP Resv Info:
+      Record Route:  NONE
+      Fspec: ave rate=256 kbits, burst=1000 bytes, peak rate=256 kbits
+  History:
+    Tunnel:
+      Time since created: 12 minutes, 32 seconds
+      Time since path change: 2 minutes, 44 seconds
+    Current LSP:
+      Uptime: 2 minutes, 44 seconds
+R1#
+R1#
+R1#
+R1#
+*Mar  1 02:07:28.327: %LDP-5-NBRCHG: LDP Neighbor 5.5.5.5:0 (2) is UP
+R1#show mpls traffic-eng tunnels
+
+Name: R1_t1                               (Tunnel1) Destination: 5.5.5.5
+  Status:
+    Admin: admin-down Oper: down   Path: not valid   Signalling: Down
+    path option 2, type dynamic
+
+  Config Parameters:
+    Bandwidth: 256      kbps (Global)  Priority: 5  5   Affinity: 0x0/0xFFFF
+    Metric Type: TE (default)
+    AutoRoute:  enabled   LockDown: disabled  Loadshare: 256      bw-based
+    auto-bw: disabled
+
+  History:
+    Tunnel:
+      Time since created: 43 minutes, 39 seconds
+      Time since path change: 16 minutes, 6 seconds
+    Prior LSP:
+      ID: path option 2 [4]
+      Removal Trigger: tunnel shutdown
+
+Name: R1_t2                               (Tunnel2) Destination: 5.5.5.5
+  Status:
+    Admin: up         Oper: up     Path: valid       Signalling: connected
+
+    path option 1, type explicit MyPath (Basis for Setup, path weight 130)
+
+  Config Parameters:
+    Bandwidth: 256      kbps (Global)  Priority: 2  2   Affinity: 0x0/0xFFFF
+    Metric Type: TE (default)
+    AutoRoute:  enabled   LockDown: disabled  Loadshare: 256      bw-based
+    auto-bw: disabled
+
+  InLabel  :  -
+  OutLabel : Ethernet0/0, 23
+  RSVP Signalling Info:
+       Src 1.1.1.1, Dst 5.5.5.5, Tun_Id 2, Tun_Instance 12
+    RSVP Path Info:
+      My Address: 1.1.1.1
+      Explicit Route: 10.0.12.2 10.0.23.2 10.0.34.2 10.0.45.2
+                      5.5.5.5
+      Record Route:  NONE
+      Tspec: ave rate=256 kbits, burst=1000 bytes, peak rate=256 kbits
+    RSVP Resv Info:
+      Record Route:  NONE
+      Fspec: ave rate=256 kbits, burst=1000 bytes, peak rate=256 kbits
+  History:
+    Tunnel:
+      Time since created: 14 minutes, 56 seconds
+      Time since path change: 5 minutes, 7 seconds
+    Current LSP:
+      Uptime: 5 minutes, 7 seconds
+
+LSP Tunnel R5_t2 is signalled, connection is up
+  InLabel  : Ethernet0/0, implicit-null
+  OutLabel :  -
+  RSVP Signalling Info:
+       Src 5.5.5.5, Dst 1.1.1.1, Tun_Id 2, Tun_Instance 10
+    RSVP Path Info:
+      My Address: 1.1.1.1
+      Explicit Route:  NONE
+      Record Route:  NONE
+      Tspec: ave rate=256 kbits, burst=1000 bytes, peak rate=256 kbits
+    RSVP Resv Info:
+      Record Route:  NONE
+      Fspec: ave rate=256 kbits, burst=1000 bytes, peak rate=256 kbits
+R1#
+R1#
+R1#
+R1#show running-onfig
+                ^
+% Invalid input detected at '^' marker.
+
+R1#show running-config
+Building configuration...
+
+Current configuration : 2012 bytes
+!
+version 12.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname R1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+no aaa new-model
+memory-size iomem 5
+no ip icmp rate-limit unreachable
+!
+!
+ip cef
+no ip domain lookup
+!
+!
+mpls traffic-eng tunnels
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+ip tcp synwait-time 5
+!
+!
+!
+interface Loopback0
+ ip address 1.1.1.1 255.255.255.255
+!
+interface Tunnel1
+ ip unnumbered Loopback0
+ shutdown
+ mpls ip
+ tunnel destination 5.5.5.5
+ tunnel mode mpls traffic-eng
+ tunnel mpls traffic-eng autoroute announce
+ tunnel mpls traffic-eng priority 5 5
+ tunnel mpls traffic-eng bandwidth  256
+ tunnel mpls traffic-eng path-option 2 dynamic
+ no routing dynamic
+!
+interface Tunnel2
+ ip unnumbered Loopback0
+ mpls ip
+ tunnel destination 5.5.5.5
+ tunnel mode mpls traffic-eng
+ tunnel mpls traffic-eng autoroute announce
+ tunnel mpls traffic-eng priority 2 2
+ tunnel mpls traffic-eng bandwidth  256
+ tunnel mpls traffic-eng path-option 1 explicit name MyPath
+ no routing dynamic
+!
+interface Ethernet0/0
+ ip address 10.0.12.1 255.255.255.252
+ ip ospf network point-to-point
+ half-duplex
+ mpls ip
+ mpls traffic-eng tunnels
+ ip rsvp bandwidth 512
+!
+interface Ethernet0/1
+ no ip address
+ shutdown
+ half-duplex
+!
+interface Ethernet0/2
+ no ip address
+ shutdown
+ half-duplex
+!
+interface Ethernet0/3
+ no ip address
+ shutdown
+ half-duplex
+!
+!
+router ospf 1
+ mpls traffic-eng router-id Loopback0
+ mpls traffic-eng area 0
+ log-adjacency-changes
+ network 1.1.1.1 0.0.0.0 area 0
+ network 10.0.12.0 0.0.0.3 area 0
+!
+no ip http server
+ip forward-protocol nd
+!
+!
+!
+ip explicit-path name MyPath enable
+ next-address 10.0.12.2
+ next-address 10.0.23.2
+ next-address 10.0.34.2
+ next-address 10.0.45.2
+!
+!
+!
+!
+control-plane
+!
+!
+!
+!
+!
+!
+!
+!
+banner motd ^C 2021-12-18 17:00:05 lNSbMnamq2u6ZXwp ^C
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+line vty 0 4
+ login
+!
+!
+end
+
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
