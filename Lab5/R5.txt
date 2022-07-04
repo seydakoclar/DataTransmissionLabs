@@ -1,0 +1,727 @@
+     +--------------------------------------------------------------------+
+     ¦                • MobaXterm Personal Edition v21.4 •                ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.0.115:0.0                         ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦ • Important:                                                       ¦
+     ¦ This is MobaXterm Personal Edition. The Professional edition       ¦
+     ¦ allows you to customize MobaXterm for your company: you can add    ¦
+     ¦ your own logo, your parameters, your welcome message and generate  ¦
+     ¦ either an MSI installation package or a portable executable.       ¦
+     ¦ We can also modify MobaXterm or develop the plugins you need.      ¦
+     ¦ For more information: https://mobaxterm.mobatek.net/download.html  ¦
+     +--------------------------------------------------------------------+
+
+ ? 18/01/2022 ? ? 16:52.59 ? ? /home/mobaxterm ? telnet -e# 10.14.0.223 42205
+Telnet escape character is '#'.
+Trying 10.14.0.223...
+Connected to 10.14.0.223.
+Escape character is '#'.
+Connected to Dynamips VM "R5" (ID 1, type c3600) - Console port
+Press ENTER to get the prompt.
+ROMMON emulation microcode.
+
+                           Launching IOS image at 0x80008000...
+
+                                                               Smart Init is disabled. IOMEM set to: 5
+
+                                                                                                        Using iomem percentage: 5
+
+              Restricted Rights Legend
+
+Use, duplication, or disclosure by the Government is
+subject to restrictions as set forth in subparagraph
+(c) of the Commercial Computer Software - Restricted
+Rights clause at FAR sec. 52.227-19 and subparagraph
+(c) (1) (ii) of the Rights in Technical Data and Computer
+Software clause at DFARS sec. 252.227-7013.
+
+           cisco Systems, Inc.
+           170 West Tasman Drive
+           San Jose, California 95134-1706
+
+
+
+Cisco IOS Software, 3600 Software (C3640-A3JS-M), Version 12.4(25d), RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2010 by Cisco Systems, Inc.
+Compiled Wed 18-Aug-10 06:58 by prod_rel_team
+
+Cisco 3640 (R4700) processor (revision 0xFF) with 124928K/6144K bytes of memory.
+Processor board ID FF1045C5
+R4700 CPU at 100MHz, Implementation 33, Rev 1.2
+4 Ethernet interfaces
+DRAM configuration is 64 bits wide with parity enabled.
+125K bytes of NVRAM.
+8192K bytes of processor board System flash (Read/Write)
+
+SETUP: new interface Ethernet0/0 placed in "shutdown" state
+SETUP: new interface Ethernet0/1 placed in "shutdown" state
+SETUP: new interface Ethernet0/2 placed in "shutdown" state
+SETUP: new interface Ethernet0/3 placed in "shutdown" state
+
+
+Press RETURN to get started!
+
+
+*Mar  1 00:00:10.495: %LINEPROTO-5-UPDOWN: Line protocol on Interface VoIP-Null0, changed state to up
+*Mar  1 00:00:10.503: %LINK-3-UPDOWN: Interface Ethernet0/0, changed state to up
+*Mar  1 00:00:10.507: %LINK-3-UPDOWN: Interface Ethernet0/1, changed state to up
+*Mar  1 00:00:10.515: %LINK-3-UPDOWN: Interface Ethernet0/2, changed state to up
+*Mar  1 00:00:10.519: %LINK-3-UPDOWN: Interface Ethernet0/3, changed state to up
+*Mar  1 00:00:10.527: %LINEPROTO-5-UPDOWN: Line protocol on Interface IPv6-mpls, changed state to up
+*Mar  1 00:00:11.451: %SYS-5-CONFIG_I: Configured from memory by console
+*Mar  1 00:00:11.619: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/0, changed state to down
+*Mar  1 00:00:11.619: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/1, changed state to down
+*Mar  1 00:00:11.623: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/2, changed state to down
+*Mar  1 00:00:11.627: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/3, changed state to down
+*Mar  1 00:00:12.211: %SYS-5-RESTART: System restarted --
+Cisco IOS Software, 3600 Software (C3640-A3JS-M), Version 12.4(25d), RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2010 by Cisco Systems, Inc.
+Compiled Wed 18-Aug-10 06:58 by prod_rel_team
+*Mar  1 00:00:12.251: %SNMP-5-COLDSTART: SNMP agent on host R5 is undergoing a cold start
+*Mar  1 00:00:13.451: %LINK-5-CHANGED: Interface Ethernet0/0, changed state to administratively down
+*Mar  1 00:00:13.459: %LINK-5-CHANGED: Interface Ethernet0/1, changed state to administratively down
+*Mar  1 00:00:13.467: %LINK-5-CHANGED: Interface Ethernet0/2, changed state to administratively down
+*Mar  1 00:00:13.475: %LINK-5-CHANGED: Interface Ethernet0/3, changed state to administratively down 2022-01-18 18:00:05 IVJ3nCnyJvMASbrF
+R5#
+R5#
+R5#
+R5#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+R5(config)#int e0/0
+R5(config-if)#ip address 10.0.35.2 255.255.255.252
+R5(config-if)#no shutdown
+R5(config-if)#int e0/
+*Mar  1 00:13:47.179: %LINK-3-UPDOWN: Interface Ethernet0/0, changed state to up
+*Mar  1 00:13:48.179: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/0, changed state to up
+R5(config-if)#int e0/2
+R5(config-if)#ip address 10.0.45.2 255.255.255.252
+R5(config-if)#no shutdown
+R5(config-if)#int e
+*Mar  1 00:14:03.411: %LINK-3-UPDOWN: Interface Ethernet0/2, changed state to up
+*Mar  1 00:14:04.411: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/2, changed state to up
+R5(config-if)#int Loopback 0
+R5(config-if)#ip address 10.0.45.2 255.255.255.252
+*Mar  1 00:14:09.383: %LINEPROTO-5-UPDOWN: Line protocol on Interface Loopback0, changed state to up
+R5(config-if)#ip address 5.5.5.5 255.255.255.0
+R5(config-if)#int Loopback 1
+R5(config-if)#ip address 5.5.5.5 255.255.255.0
+*Mar  1 00:14:32.783: %LINEPROTO-5-UPDOWN: Line protocol on Interface Loopback1, changed state to up
+R5(config-if)#int Loopback 0
+R5(config-if)#ip address 5.5.5.5 255.255.255.255
+R5(config-if)#int Loopback 1
+R5(config-if)#ip address 192.168.51.1 255.255.255.0
+R5(config-if)#int Loopback 2
+R5(config-if)#ip address 192.168.51.1 255.255.255.0
+*Mar  1 00:15:17.263: %LINEPROTO-5-UPDOWN: Line protocol on Interface Loopback2, changed state to up
+R5(config-if)#ip address 192.168.52.1 255.255.255.0
+R5(config-if)#do show ip route
+Codes: C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route
+
+Gateway of last resort is not set
+
+     5.0.0.0/32 is subnetted, 1 subnets
+C       5.5.5.5 is directly connected, Loopback0
+     10.0.0.0/30 is subnetted, 2 subnets
+C       10.0.45.0 is directly connected, Ethernet0/2
+C       10.0.35.0 is directly connected, Ethernet0/0
+C    192.168.52.0/24 is directly connected, Loopback2
+C    192.168.51.0/24 is directly connected, Loopback1
+R5(config-if)#do show cdp neighbor
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+R3               Eth 0/0            160        R S I      3640      Eth 0/0
+R4               Eth 0/2            148        R S I      3640      Eth 0/2
+R5(config-if)#router bgp 500
+R5(config-router)#neighbor 10.0.35.1 remote-as 230
+R5(config-router)#neighbor remote-as 400
+*Mar  1 00:55:56.075: %BGP-5-ADJCHANGE: neighbor 10.0.35.1 Up
+R5(config-router)#neighbor 10.0.45.1 remote-as 400
+R5(config-router)#
+*Mar  1 00:56:25.859: %BGP-5-ADJCHANGE: neighbor 10.0.45.1 Up
+R5(config-router)#do show ip bgp summary
+BGP router identifier 192.168.52.1, local AS number 500
+BGP table version is 3, main routing table version 3
+2 network entries using 234 bytes of memory
+4 path entries using 208 bytes of memory
+5/2 BGP path/bestpath attribute entries using 620 bytes of memory
+4 BGP AS-PATH entries using 96 bytes of memory
+0 BGP route-map cache entries using 0 bytes of memory
+0 BGP filter-list cache entries using 0 bytes of memory
+BGP using 1158 total bytes of memory
+BGP activity 2/0 prefixes, 4/0 paths, scan interval 60 secs
+
+Neighbor        V    AS MsgRcvd MsgSent   TblVer  InQ OutQ Up/Down  State/PfxRcd
+10.0.35.1       4   230      10       8        3    0    0 00:04:14        2
+10.0.45.1       4   400       9       9        3    0    0 00:03:44        2
+R5(config-router)#router bgp 500
+R5(config-router)#network 192.168.51.0 mask 255.255.255.0
+R5(config-router)#network 192.168.52.0 mask 255.255.255.0
+R5(config-router)#do show ip route
+Codes: C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route
+
+Gateway of last resort is not set
+
+B    192.168.31.0/24 [20/0] via 10.0.35.1, 00:10:34
+B    192.168.42.0/24 [20/0] via 10.0.45.1, 00:02:49
+B    192.168.43.0/24 [20/0] via 10.0.45.1, 00:02:49
+     5.0.0.0/32 is subnetted, 1 subnets
+C       5.5.5.5 is directly connected, Loopback0
+B    192.168.11.0/24 [20/0] via 10.0.35.1, 00:10:34
+B    192.168.41.0/24 [20/0] via 10.0.45.1, 00:03:20
+B    192.168.21.0/24 [20/0] via 10.0.35.1, 00:04:59
+     10.0.0.0/30 is subnetted, 2 subnets
+C       10.0.45.0 is directly connected, Ethernet0/2
+C       10.0.35.0 is directly connected, Ethernet0/0
+C    192.168.52.0/24 is directly connected, Loopback2
+C    192.168.51.0/24 is directly connected, Loopback1
+R5(config-router)#do show ip bgp
+BGP table version is 10, local router ID is 192.168.52.1
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal,
+              r RIB-failure, S Stale
+Origin codes: i - IGP, e - EGP, ? - incomplete
+
+   Network          Next Hop            Metric LocPrf Weight Path
+*  192.168.11.0     10.0.45.1                              0 400 230 100 i
+*>                  10.0.35.1                              0 230 100 i
+*> 192.168.21.0     10.0.35.1                              0 230 i
+*                   10.0.45.1                              0 400 230 i
+*  192.168.31.0     10.0.45.1                              0 400 230 i
+*>                  10.0.35.1                0             0 230 i
+*  192.168.41.0     10.0.35.1                              0 230 400 i
+*>                  10.0.45.1                0             0 400 i
+*  192.168.42.0     10.0.35.1                              0 230 400 i
+*>                  10.0.45.1                0             0 400 i
+*  192.168.43.0     10.0.35.1                              0 230 400 i
+*>                  10.0.45.1                0             0 400 i
+*> 192.168.51.0     0.0.0.0                  0         32768 i
+*> 192.168.52.0     0.0.0.0                  0         32768 i
+R5(config-router)#do show ip bgp
+BGP table version is 10, local router ID is 192.168.52.1
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal,
+              r RIB-failure, S Stale
+Origin codes: i - IGP, e - EGP, ? - incomplete
+
+   Network          Next Hop            Metric LocPrf Weight Path
+*  192.168.11.0     10.0.45.1                              0 400 230 100 i
+*>                  10.0.35.1                              0 230 100 i
+*> 192.168.21.0     10.0.35.1                              0 230 i
+*                   10.0.45.1                              0 400 230 i
+*  192.168.31.0     10.0.45.1                              0 400 230 i
+*>                  10.0.35.1                0             0 230 i
+*  192.168.41.0     10.0.35.1                              0 230 400 i
+*>                  10.0.45.1                0             0 400 i
+*  192.168.42.0     10.0.35.1                              0 230 400 i
+*>                  10.0.45.1                0             0 400 i
+*  192.168.43.0     10.0.35.1                              0 230 400 i
+*>                  10.0.45.1                0             0 400 i
+*> 192.168.51.0     0.0.0.0                  0         32768 i
+*> 192.168.52.0     0.0.0.0                  0         32768 i
+R5(config-router)#router bgp 500
+R5(config-router)#aggregate address 192.168.48.0 255.255.248.0
+                            ^
+% Invalid input detected at '^' marker.
+
+R5(config-router)#aggregate-address 192.168.48.0 255.255.248.0
+R5(config-router)#aggregate address 192.168.48.0 255.255.248.0 summary-only
+                            ^
+% Invalid input detected at '^' marker.
+
+R5(config-router)#aggregate-address 192.168.48.0 255.255.248.0 summary-only
+R5(config-router)#neighbor 10.0.45.1 description IX peer
+R5(config-router)#neighbor 10.0.45.1 description route-map prepend out
+R5(config-router)#route-map prepend permit 10
+R5(config-route-map)#set as-path prepend 400
+R5(config-route-map)#exit
+R5(config)#router bgp 500
+R5(config-router)#route-map prepend permit 10
+R5(config-route-map)#set as-path prepend 500 500 500 500 500
+R5(config-route-map)#router bgp 500
+R5(config-router)#neighbor 10.0.45.1 remote-as 400
+R5(config-router)#neighbor 10.0.45.1 route-map prepend out
+R5(config-router)#do show ip bgp 192.168.51.0/24
+BGP routing table entry for 192.168.51.0/24, version 12
+Paths: (1 available, best #1, table Default-IP-Routing-Table, Advertisements suppressed by an aggregate.)
+  Not advertised to any peer
+  Local
+    0.0.0.0 from 0.0.0.0 (192.168.52.1)
+      Origin IGP, metric 0, localpref 100, weight 32768, valid, sourced, local, best
+R5(config-router)#do show ip bgp 192.168.48.0/21
+BGP routing table entry for 192.168.48.0/21, version 11
+Paths: (1 available, best #1, table Default-IP-Routing-Table)
+  Advertised to update-groups:
+     1          2
+  Local, (aggregated by 500 192.168.52.1)
+    0.0.0.0 from 0.0.0.0 (192.168.52.1)
+      Origin IGP, localpref 100, weight 32768, valid, aggregated, local, atomic-aggregate, best
+R5(config-router)#aggregate-address 192.168.48.0 255.255.248.0 summary-only as$
+R5(config-router)#$ddress 192.168.48.0 255.255.248.0 summary-only
+R5(config-router)#router bgp 500
+R5(config-router)#set as-path prepend 400
+                   ^
+% Invalid input detected at '^' marker.
+
+R5(config-router)#route-map prepend permit 10
+R5(config-route-map)#set as-path prepend 400
+R5(config-route-map)#ip prefix-list 500 permit 192.168.48.0/21
+R5(config)#ip prefix-list 500 permit 192.168.48.0/21
+%Insertion failed - prefix-list entry exists:
+   seq 5 permit 192.168.48.0/21
+R5(config)#do show ip prefix-list
+ip prefix-list 500: 1 entries
+   seq 5 permit 192.168.48.0/21
+R5(config)#route-map 500
+R5(config-route-map)#match ip address prefix-list 500
+R5(config-route-map)#exit
+R5(config)#route-map 500-prepend
+R5(config-route-map)#match ip address prefix-list 500
+R5(config-route-map)#exit
+R5(config)#router bgp 500
+R5(config-router)#route-map 500-prepend
+R5(config-route-map)#match ip address prefix-list 500 500 500
+R5(config-route-map)#exit
+R5(config)#router bgp 500
+R5(config-router)#neighbor 10.0.35.2 route-map 500-prepend in
+% Cannot configure the local system as neighbor
+R5(config-router)#neighbor 10.0.35.1 route-map 500-prepend in
+R5(config-router)#do show ip prefix-list
+ip prefix-list 500: 1 entries
+   seq 5 permit 192.168.48.0/21
+R5(config-router)#route-map prepend permit 10
+R5(config-route-map)#route-map 500-prepend^Z
+R5#
+*Mar  1 02:30:33.175: %SYS-5-CONFIG_I: Configured from console by console
+R5#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+R5(config)#ip prefix-list 500-prepend permit 192.168.48.0/21
+R5(config)#do show ip prefix-list
+ip prefix-list 500: 1 entries
+   seq 5 permit 192.168.48.0/21
+ip prefix-list 500-prepend: 1 entries
+   seq 5 permit 192.168.48.0/21
+R5(config)#no ip prefix-list 500-prepend permit 192.168.48.0/21
+R5(config)#do show ip prefix-list
+ip prefix-list 500: 1 entries
+   seq 5 permit 192.168.48.0/21
+ip prefix-list 500-prepend: 0 entries
+R5(config)#no ip prefix-list 500-prepend
+R5(config)#do show ip prefix-list
+ip prefix-list 500: 1 entries
+   seq 5 permit 192.168.48.0/21
+R5(config)#do show ip route-map
+show ip route-map
+             ^
+% Invalid input detected at '^' marker.
+
+R5(config)#do show route-map
+route-map 500, permit, sequence 10
+  Match clauses:
+    ip address prefix-lists: 500
+  Set clauses:
+  Policy routing matches: 0 packets, 0 bytes
+route-map 500-prepend, permit, sequence 10
+  Match clauses:
+    ip address prefix-lists: 500
+  Set clauses:
+  Policy routing matches: 0 packets, 0 bytes
+route-map prepend, permit, sequence 10
+  Match clauses:
+  Set clauses:
+    as-path prepend 400
+  Policy routing matches: 0 packets, 0 bytes
+R5(config)#no route-map 500
+R5(config)#no route-map 500-prepend
+R5(config)#no route-map prepend
+R5(config)#do show route-map
+
+R5(config)#route-map AS500
+R5(config-route-map)#match ip address prefix-list 500
+R5(config-route-map)#route-map AS500-PREPEND
+R5(config-route-map)#match ip address prefix-list 500
+R5(config-route-map)#set as-path prepend 500 500 500
+R5(config-route-map)#do show ip bgp
+BGP table version is 15, local router ID is 192.168.52.1
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal,
+              r RIB-failure, S Stale
+Origin codes: i - IGP, e - EGP, ? - incomplete
+
+   Network          Next Hop            Metric LocPrf Weight Path
+*  192.168.11.0     10.0.45.1                              0 400 230 100 i
+*>                  10.0.35.1                              0 230 100 i
+*> 192.168.21.0     10.0.35.1                              0 230 i
+*                   10.0.45.1                              0 400 230 i
+*  192.168.31.0     10.0.45.1                              0 400 230 i
+*>                  10.0.35.1                0             0 230 i
+*  192.168.41.0     10.0.35.1                              0 230 400 i
+*>                  10.0.45.1                0             0 400 i
+*  192.168.42.0     10.0.35.1                              0 230 400 i
+*>                  10.0.45.1                0             0 400 i
+*  192.168.43.0     10.0.35.1                              0 230 400 i
+*>                  10.0.45.1                0             0 400 i
+*> 192.168.48.0/21  0.0.0.0                            32768 i
+s> 192.168.51.0     0.0.0.0                  0         32768 i
+s> 192.168.52.0     0.0.0.0                  0         32768 i
+R5(config-route-map)#ip prefix-list 500 permit 192.168.51.0/24
+R5(config)#ip prefix-list 500 permit 192.168.52.0/24
+R5(config)#do show ip prefix-list
+ip prefix-list 500: 3 entries
+   seq 5 permit 192.168.48.0/21
+   seq 10 permit 192.168.51.0/24
+   seq 15 permit 192.168.52.0/24
+R5(config)#router bgp 500
+R5(config-router)#neighbor 10.0.45.1 route-map AS100 in
+R5(config-router)#neighbor 10.0.45.1 route-map AS500 in
+R5(config-router)#neighbor 10.0.45.1 route-map AS500-prepend in
+R5(config-router)#do show ip bgp neighbors 10.0.45.1 advertised-routes
+BGP table version is 15, local router ID is 192.168.52.1
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal,
+              r RIB-failure, S Stale
+Origin codes: i - IGP, e - EGP, ? - incomplete
+
+   Network          Next Hop            Metric LocPrf Weight Path
+*> 192.168.11.0     10.0.35.1                              0 230 100 i
+*> 192.168.21.0     10.0.35.1                              0 230 i
+*> 192.168.31.0     10.0.35.1                0             0 230 i
+*> 192.168.48.0/21  0.0.0.0                            32768 i
+
+Total number of prefixes 4
+R5(config-router)#do show ip bgp neighbors 10.0.35.1 advertised-routes
+BGP table version is 15, local router ID is 192.168.52.1
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal,
+              r RIB-failure, S Stale
+Origin codes: i - IGP, e - EGP, ? - incomplete
+
+   Network          Next Hop            Metric LocPrf Weight Path
+*> 192.168.11.0     10.0.35.1                              0 230 100 i
+*> 192.168.21.0     10.0.35.1                              0 230 i
+*> 192.168.31.0     10.0.35.1                0             0 230 i
+*> 192.168.41.0     10.0.45.1                0             0 400 i
+*> 192.168.42.0     10.0.45.1                0             0 400 i
+*> 192.168.43.0     10.0.45.1                0             0 400 i
+*> 192.168.48.0/21  0.0.0.0                            32768 i
+
+Total number of prefixes 7
+R5(config-router)#do show ip bgp
+BGP table version is 15, local router ID is 192.168.52.1
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal,
+              r RIB-failure, S Stale
+Origin codes: i - IGP, e - EGP, ? - incomplete
+
+   Network          Next Hop            Metric LocPrf Weight Path
+*  192.168.11.0     10.0.45.1                              0 400 230 100 i
+*>                  10.0.35.1                              0 230 100 i
+*> 192.168.21.0     10.0.35.1                              0 230 i
+*                   10.0.45.1                              0 400 230 i
+*  192.168.31.0     10.0.45.1                              0 400 230 i
+*>                  10.0.35.1                0             0 230 i
+*  192.168.41.0     10.0.35.1                              0 230 400 i
+*>                  10.0.45.1                0             0 400 i
+*  192.168.42.0     10.0.35.1                              0 230 400 i
+*>                  10.0.45.1                0             0 400 i
+*  192.168.43.0     10.0.35.1                              0 230 400 i
+*>                  10.0.45.1                0             0 400 i
+*> 192.168.48.0/21  0.0.0.0                            32768 i
+s> 192.168.51.0     0.0.0.0                  0         32768 i
+s> 192.168.52.0     0.0.0.0                  0         32768 i
+R5(config-router)#route-map AS500-PREPEND
+R5(config-route-map)#set as-path prepend 300 300 300
+R5(config-route-map)#do show ip bgp
+BGP table version is 15, local router ID is 192.168.52.1
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal,
+              r RIB-failure, S Stale
+Origin codes: i - IGP, e - EGP, ? - incomplete
+
+   Network          Next Hop            Metric LocPrf Weight Path
+*  192.168.11.0     10.0.45.1                              0 400 230 100 i
+*>                  10.0.35.1                              0 230 100 i
+*> 192.168.21.0     10.0.35.1                              0 230 i
+*                   10.0.45.1                              0 400 230 i
+*  192.168.31.0     10.0.45.1                              0 400 230 i
+*>                  10.0.35.1                0             0 230 i
+*  192.168.41.0     10.0.35.1                              0 230 400 i
+*>                  10.0.45.1                0             0 400 i
+*  192.168.42.0     10.0.35.1                              0 230 400 i
+*>                  10.0.45.1                0             0 400 i
+*  192.168.43.0     10.0.35.1                              0 230 400 i
+*>                  10.0.45.1                0             0 400 i
+*> 192.168.48.0/21  0.0.0.0                            32768 i
+s> 192.168.51.0     0.0.0.0                  0         32768 i
+s> 192.168.52.0     0.0.0.0                  0         32768 i
+R5(config-route-map)#do show ip prefix-list
+ip prefix-list 500: 3 entries
+   seq 5 permit 192.168.48.0/21
+   seq 10 permit 192.168.51.0/24
+   seq 15 permit 192.168.52.0/24
+R5(config-route-map)#no ip prefix-list
+                        ^
+% Invalid input detected at '^' marker.
+
+R5(config-route-map)#no ip prefix-list 500
+R5(config)#do show ip prefix-list
+ip prefix-list 500: 0 entries
+R5(config)#no route-map AS500-PREPEND
+R5(config)#no route-map AS500
+R5(config)#do show route-map
+
+R5(config)#do show ip bgp
+BGP table version is 15, local router ID is 192.168.52.1
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal,
+              r RIB-failure, S Stale
+Origin codes: i - IGP, e - EGP, ? - incomplete
+
+   Network          Next Hop            Metric LocPrf Weight Path
+*  192.168.11.0     10.0.45.1                              0 400 230 100 i
+*>                  10.0.35.1                              0 230 100 i
+*> 192.168.21.0     10.0.35.1                              0 230 i
+*                   10.0.45.1                              0 400 230 i
+*  192.168.31.0     10.0.45.1                              0 400 230 i
+*>                  10.0.35.1                0             0 230 i
+*  192.168.41.0     10.0.35.1                              0 230 400 i
+*>                  10.0.45.1                0             0 400 i
+*  192.168.42.0     10.0.35.1                              0 230 400 i
+*>                  10.0.45.1                0             0 400 i
+*  192.168.43.0     10.0.35.1                              0 230 400 i
+*>                  10.0.45.1                0             0 400 i
+*> 192.168.48.0/21  0.0.0.0                            32768 i
+s> 192.168.51.0     0.0.0.0                  0         32768 i
+s> 192.168.52.0     0.0.0.0                  0         32768 i
+R5(config)#access-list 15 permit 10.0.35.0 0.0.0.3
+R5(config)#route-map AS500 permit 10
+R5(config-route-map)#match ip address 15
+R5(config-route-map)#set as-path prepend 400 400
+R5(config-route-map)#route-map AS500 permit 20
+R5(config-route-map)#router bgp 500
+R5(config-router)#neighbor 10.0.35.1 route-map AS500 in
+R5(config-router)#clear ip bgp 10.0.35.1 soft
+                  ^
+% Invalid input detected at '^' marker.
+
+R5(config-router)#do clear ip bgp 10.0.35.1 soft
+R5(config-router)#do show access-list
+Standard IP access list 15
+    10 permit 10.0.35.0, wildcard bits 0.0.0.3
+R5(config-router)#no access-list
+                      ^
+% Invalid input detected at '^' marker.
+
+R5(config-router)#no access-list 15
+R5(config)#do show access-list
+
+R5(config)#access-list 15 permit 192.168.48.0  0.0.7.255
+R5(config)#route-map AS500 permit 10
+R5(config-route-map)#match ip address 15
+R5(config-route-map)#set as-path prepend 400
+R5(config-route-map)#route-map AS500 permit 20
+R5(config-route-map)#router bgp 500
+R5(config-router)#neighbor 192.168.48.0 route-map AS500 in
+% Specify remote-as or peer-group commands first
+R5(config-router)#neighbor 192.168.48.0 remote-as 500
+R5(config-router)#neighbor 192.168.48.0 route-map AS500 in
+R5(config-router)#clear ip bgp 192.168.48.0 soft
+                  ^
+% Invalid input detected at '^' marker.
+
+R5(config-router)#do clear ip bgp 192.168.48.0 soft
+R5(config-router)#do show ip bgp
+BGP table version is 15, local router ID is 192.168.52.1
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal,
+              r RIB-failure, S Stale
+Origin codes: i - IGP, e - EGP, ? - incomplete
+
+   Network          Next Hop            Metric LocPrf Weight Path
+*  192.168.11.0     10.0.45.1                              0 400 230 100 i
+*>                  10.0.35.1                              0 230 100 i
+*> 192.168.21.0     10.0.35.1                              0 230 i
+*                   10.0.45.1                              0 400 230 i
+*  192.168.31.0     10.0.45.1                              0 400 230 i
+*>                  10.0.35.1                0             0 230 i
+*  192.168.41.0     10.0.35.1                              0 230 400 i
+*>                  10.0.45.1                0             0 400 i
+*  192.168.42.0     10.0.35.1                              0 230 400 i
+*>                  10.0.45.1                0             0 400 i
+*  192.168.43.0     10.0.35.1                              0 230 400 i
+*>                  10.0.45.1                0             0 400 i
+*> 192.168.48.0/21  0.0.0.0                            32768 i
+s> 192.168.51.0     0.0.0.0                  0         32768 i
+s> 192.168.52.0     0.0.0.0                  0         32768 i
+R5(config-router)#no access-list 15
+R5(config)#do show access-list
+
+R5(config)#access-list 35 permit 192.168.48.0 0.0.7.255
+R5(config)#no route-map AS500
+R5(config)#do show route-map
+
+R5(config)#route-map inprepend permit 10
+R5(config-route-map)#match ip address 35
+R5(config-route-map)#set as-path prepend 500 500 500 500 500
+R5(config-route-map)#router bgp 500
+R5(config-router)#neighbor 10.0.35.1 route-map inprepend out
+R5(config-router)#clear ip bgp 10.0.35.1 soft
+                  ^
+% Invalid input detected at '^' marker.
+
+R5(config-router)#do clear ip bgp 10.0.35.1 soft
+R5(config-router)#route-map inprepend permit 10
+R5(config-route-map)#match ip address 35
+R5(config-route-map)#set as-path prepend 400
+R5(config-route-map)#router bgp 500
+R5(config-router)#neighbor 10.0.35.1 route-map inprepend out
+R5(config-router)#do clear ip bgp 10.0.35.1 soft
+R5(config-router)#route-map inprepend permit 10
+R5(config-route-map)#match ip address 35
+R5(config-route-map)#$ prepend 400 400 400 400 400 400 400 400 400 400
+R5(config-route-map)#router bgp 500
+R5(config-router)#neighbor 10.0.35.1 route-map inprepend out
+R5(config-router)#do clear ip bgp 10.0.35.1 soft
+R5(config-router)#exit
+R5(config)#exit
+R5#show
+*Mar  1 03:17:40.783: %SYS-5-CONFIG_I: Configured from console by console
+R5#show running-config
+Building configuration...
+
+Current configuration : 1816 bytes
+!
+version 12.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname R5
+!
+boot-start-marker
+boot-end-marker
+!
+!
+no aaa new-model
+memory-size iomem 5
+no ip icmp rate-limit unreachable
+!
+!
+ip cef
+no ip domain lookup
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+ip tcp synwait-time 5
+!
+!
+!
+interface Loopback0
+ ip address 5.5.5.5 255.255.255.255
+!
+interface Loopback1
+ ip address 192.168.51.1 255.255.255.0
+!
+interface Loopback2
+ ip address 192.168.52.1 255.255.255.0
+!
+interface Ethernet0/0
+ ip address 10.0.35.2 255.255.255.252
+ half-duplex
+!
+interface Ethernet0/1
+ no ip address
+ shutdown
+ half-duplex
+!
+interface Ethernet0/2
+ ip address 10.0.45.2 255.255.255.252
+ half-duplex
+!
+interface Ethernet0/3
+ no ip address
+ shutdown
+ half-duplex
+!
+!
+router bgp 500
+ no synchronization
+ bgp log-neighbor-changes
+ network 192.168.51.0
+ network 192.168.52.0
+ aggregate-address 192.168.48.0 255.255.248.0 summary-only
+ neighbor 10.0.35.1 remote-as 230
+ neighbor 10.0.35.1 route-map AS500 in
+ neighbor 10.0.35.1 route-map inprepend out
+ neighbor 10.0.45.1 remote-as 400
+ neighbor 10.0.45.1 description route-map prepend out
+ neighbor 10.0.45.1 route-map AS500-prepend in
+ neighbor 10.0.45.1 route-map prepend out
+ neighbor 192.168.48.0 remote-as 500
+ neighbor 192.168.48.0 route-map AS500 in
+ no auto-summary
+!
+no ip http server
+ip forward-protocol nd
+!
+!
+!
+access-list 35 permit 192.168.48.0 0.0.7.255
+!
+route-map inprepend permit 10
+ match ip address 35
+ set as-path prepend 400 400 400 400 400 400 400 400 400 400
+!
+!
+!
+control-plane
+!
+!
+!
+!
+!
+!
+!
+!
+banner motd ^C 2022-01-18 18:00:05 IVJ3nCnyJvMASbrF ^C
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+line vty 0 4
+ login
+!
+!
+end
+
+R5#
+R5#

@@ -1,0 +1,915 @@
+     +--------------------------------------------------------------------+
+     ¦                • MobaXterm Personal Edition v21.4 •                ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.0.115:0.0                         ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦ • Important:                                                       ¦
+     ¦ This is MobaXterm Personal Edition. The Professional edition       ¦
+     ¦ allows you to customize MobaXterm for your company: you can add    ¦
+     ¦ your own logo, your parameters, your welcome message and generate  ¦
+     ¦ either an MSI installation package or a portable executable.       ¦
+     ¦ We can also modify MobaXterm or develop the plugins you need.      ¦
+     ¦ For more information: https://mobaxterm.mobatek.net/download.html  ¦
+     +--------------------------------------------------------------------+
+
+ ? 18/01/2022 ? ? 16:52.56 ? ? /home/mobaxterm ? telner -e# 10.14.0.223 42202
+telner: command not found
+
+
+ ? 18/01/2022 ? ? 18:01.43 ? ? /home/mobaxterm ? telnet -e# 10.14.0.223 42202
+Telnet escape character is '#'.
+Trying 10.14.0.223...
+Connected to 10.14.0.223.
+Escape character is '#'.
+Connected to Dynamips VM "R2" (ID 3, type c3600) - Console port
+Press ENTER to get the prompt.
+ROMMON emulation microcode.
+
+                           Launching IOS image at 0x80008000...
+
+                                                               Smart Init is disabled. IOMEM set to: 5
+
+                                                                                                        Using iomem percentage: 5
+
+              Restricted Rights Legend
+
+Use, duplication, or disclosure by the Government is
+subject to restrictions as set forth in subparagraph
+(c) of the Commercial Computer Software - Restricted
+Rights clause at FAR sec. 52.227-19 and subparagraph
+(c) (1) (ii) of the Rights in Technical Data and Computer
+Software clause at DFARS sec. 252.227-7013.
+
+           cisco Systems, Inc.
+           170 West Tasman Drive
+           San Jose, California 95134-1706
+
+
+
+Cisco IOS Software, 3600 Software (C3640-A3JS-M), Version 12.4(25d), RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2010 by Cisco Systems, Inc.
+Compiled Wed 18-Aug-10 06:58 by prod_rel_team
+
+Cisco 3640 (R4700) processor (revision 0xFF) with 124928K/6144K bytes of memory.
+Processor board ID FF1045C5
+R4700 CPU at 100MHz, Implementation 33, Rev 1.2
+4 Ethernet interfaces
+DRAM configuration is 64 bits wide with parity enabled.
+125K bytes of NVRAM.
+8192K bytes of processor board System flash (Read/Write)
+
+SETUP: new interface Ethernet0/0 placed in "shutdown" state
+SETUP: new interface Ethernet0/1 placed in "shutdown" state
+SETUP: new interface Ethernet0/2 placed in "shutdown" state
+SETUP: new interface Ethernet0/3 placed in "shutdown" state
+
+
+Press RETURN to get started!
+
+
+*Mar  1 00:00:11.571: %LINEPROTO-5-UPDOWN: Line protocol on Interface VoIP-Null0, changed state to up
+*Mar  1 00:00:11.579: %LINK-3-UPDOWN: Interface Ethernet0/0, changed state to up
+*Mar  1 00:00:11.583: %LINK-3-UPDOWN: Interface Ethernet0/1, changed state to up
+*Mar  1 00:00:11.591: %LINK-3-UPDOWN: Interface Ethernet0/2, changed state to up
+*Mar  1 00:00:11.595: %LINK-3-UPDOWN: Interface Ethernet0/3, changed state to up
+*Mar  1 00:00:11.603: %LINEPROTO-5-UPDOWN: Line protocol on Interface IPv6-mpls, changed state to up
+*Mar  1 00:00:12.439: %SYS-5-CONFIG_I: Configured from memory by console
+*Mar  1 00:00:12.595: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/0, changed state to down
+*Mar  1 00:00:12.595: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/1, changed state to down
+*Mar  1 00:00:12.595: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/2, changed state to down
+*Mar  1 00:00:12.595: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/3, changed state to down
+*Mar  1 00:00:13.119: %SYS-5-RESTART: System restarted --
+Cisco IOS Software, 3600 Software (C3640-A3JS-M), Version 12.4(25d), RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2010 by Cisco Systems, Inc.
+Compiled Wed 18-Aug-10 06:58 by prod_rel_team
+*Mar  1 00:00:13.159: %SNMP-5-COLDSTART: SNMP agent on host R2 is undergoing a cold start
+*Mar  1 00:00:14.443: %LINK-5-CHANGED: Interface Ethernet0/0, changed state to administratively down
+*Mar  1 00:00:14.451: %LINK-5-CHANGED: Interface Ethernet0/1, changed state to administratively down
+*Mar  1 00:00:14.467: %LINK-5-CHANGED: Interface Ethernet0/2, changed state to administratively down
+*Mar  1 00:00:14.475: %LINK-5-CHANGED: Interface Ethernet0/3, changed state to administratively down 2022-01-18 18:00:05 IVJ3nCnyJvMASbrF
+R2#
+R2#
+R2#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+R2(config)#int e0/0
+R2(config-if)#ip address 10.0.12.2 255.255.255.252
+R2(config-if)#no shutdown
+R2(config-if)#int e0/
+*Mar  1 00:06:17.967: %LINK-3-UPDOWN: Interface Ethernet0/0, changed state to up
+*Mar  1 00:06:18.967: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/0, changed state to up
+R2(config-if)#int e0/1
+R2(config-if)#ip address 10.0.24.1 255.255.255.252
+R2(config-if)#no shutdown
+R2(config-if)#int e0/2
+*Mar  1 00:06:35.787: %LINK-3-UPDOWN: Interface Ethernet0/1, changed state to up
+*Mar  1 00:06:36.787: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/1, changed state to up
+R2(config-if)#int e0/3
+R2(config-if)#ip address 10.0.23.1 255.255.255.252
+R2(config-if)#no shutdown
+R2(config-if)#int e
+*Mar  1 00:06:56.899: %LINK-3-UPDOWN: Interface Ethernet0/3, changed state to up
+*Mar  1 00:06:57.899: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/3, changed state to up
+R2(config-if)#int Loopback 0
+R2(config-if)#ip address 10.0.23.1 255.255.255.252
+*Mar  1 00:07:03.791: %LINEPROTO-5-UPDOWN: Line protocol on Interface Loopback0, changed state to up
+R2(config-if)#ip address 2.2.2.2 255.255.255.255
+R2(config-if)#int Loopback 1
+R2(config-if)#ip address 2.2.2.2 255.255.255.255
+*Mar  1 00:07:27.335: %LINEPROTO-5-UPDOWN: Line protocol on Interface Loopback1, changed state to up
+R2(config-if)#ip address 192.168.21.1 255.255.255.0
+R2(config-if)#do show ip route
+Codes: C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route
+
+Gateway of last resort is not set
+
+     2.0.0.0/32 is subnetted, 1 subnets
+C       2.2.2.2 is directly connected, Loopback0
+C    192.168.21.0/24 is directly connected, Loopback1
+     10.0.0.0/30 is subnetted, 3 subnets
+C       10.0.12.0 is directly connected, Ethernet0/0
+C       10.0.24.0 is directly connected, Ethernet0/1
+C       10.0.23.0 is directly connected, Ethernet0/3
+R2(config-if)#do show cdp neighbor
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+R1               Eth 0/0            122        R S I      3640      Eth 0/0
+R4               Eth 0/1            141        R S I      3640      Eth 0/1
+R2(config-if)#do show int brief
+show int brief
+          ^
+% Invalid input detected at '^' marker.
+
+R2(config-if)#do show IP int brief
+Interface                  IP-Address      OK? Method Status                Protocol
+Ethernet0/0                10.0.12.2       YES manual up                    up
+Ethernet0/1                10.0.24.1       YES manual up                    up
+Ethernet0/2                unassigned      YES unset  administratively down down
+Ethernet0/3                10.0.23.1       YES manual up                    up
+Loopback0                  2.2.2.2         YES manual up                    up
+Loopback1                  192.168.21.1    YES manual up                    up
+R2(config-if)#int e0/3
+R2(config-if)#ip address unnumbered
+                         ^
+% Invalid input detected at '^' marker.
+
+R2(config-if)#no ip address
+R2(config-if)#int e0/2
+R2(config-if)#ip address 10.0.23.1 255.255.255.252
+R2(config-if)#no shutdown
+R2(config-if)#ip address unnumbered
+*Mar  1 00:21:03.203: %LINK-3-UPDOWN: Interface Ethernet0/2, changed state to up
+*Mar  1 00:21:04.203: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/2, changed state to up
+R2(config-if)#do show IP int brief
+Interface                  IP-Address      OK? Method Status                Protocol
+Ethernet0/0                10.0.12.2       YES manual up                    up
+Ethernet0/1                10.0.24.1       YES manual up                    up
+Ethernet0/2                10.0.23.1       YES manual up                    up
+Ethernet0/3                unassigned      YES manual up                    up
+Loopback0                  2.2.2.2         YES manual up                    up
+Loopback1                  192.168.21.1    YES manual up                    up
+R2(config-if)#int et0/3
+R2(config-if)#shutdown
+R2(config-if)#
+*Mar  1 00:21:24.335: %LINK-5-CHANGED: Interface Ethernet0/3, changed state to administratively down
+*Mar  1 00:21:25.335: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/3, changed state to down
+R2(config-if)#do show IP int brief
+Interface                  IP-Address      OK? Method Status                Protocol
+Ethernet0/0                10.0.12.2       YES manual up                    up
+Ethernet0/1                10.0.24.1       YES manual up                    up
+Ethernet0/2                10.0.23.1       YES manual up                    up
+Ethernet0/3                unassigned      YES manual administratively down down
+Loopback0                  2.2.2.2         YES manual up                    up
+Loopback1                  192.168.21.1    YES manual up                    up
+R2(config-if)#do show ip route
+Codes: C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route
+
+Gateway of last resort is not set
+
+     2.0.0.0/32 is subnetted, 1 subnets
+C       2.2.2.2 is directly connected, Loopback0
+C    192.168.21.0/24 is directly connected, Loopback1
+     10.0.0.0/30 is subnetted, 3 subnets
+C       10.0.12.0 is directly connected, Ethernet0/0
+C       10.0.24.0 is directly connected, Ethernet0/1
+C       10.0.23.0 is directly connected, Ethernet0/2
+R2(config-if)#do show cdp neighbor
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+R3               Eth 0/2            172        R S I      3640      Eth 0/2
+R1               Eth 0/0            151        R S I      3640      Eth 0/0
+R4               Eth 0/1            169        R S I      3640      Eth 0/1
+R2(config-if)#router ospf 1
+R2(config-router)#network 10.0.23.1 0.0.0.3 area 0
+R2(config-router)#network 2.2.2.2 0.0.0.0 area 0
+R2(config-router)#ping 2.2.2.2
+                   ^
+% Invalid input detected at '^' marker.
+
+R2(config-router)#exit
+R2(config)#eit
+            ^
+% Invalid input detected at '^' marker.
+
+R2(config)#exit
+R2#pin
+*Mar  1 00:26:02.747: %SYS-5-CONFIG_I: Configured from console by console
+R2#ping 3.3.3.3
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 3.3.3.3, timeout is 2 seconds:
+.
+*Mar  1 00:26:12.095: %OSPF-5-ADJCHG: Process 1, Nbr 192.168.31.1 on Ethernet0/2 from LOADING to FULL, Loading Done...!
+Success rate is 20 percent (1/5), round-trip min/avg/max = 196/196/196 ms
+R2#ping 3.3.3.3
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 3.3.3.3, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 12/20/24 ms
+R2#router bgp 230
+    ^
+% Invalid input detected at '^' marker.
+
+R2#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+R2(config)#router bgp 230
+R2(config-router)#neighbor 3.3.3.3 remote-as 230
+R2(config-router)#show ip bgp neighbors
+                   ^
+% Invalid input detected at '^' marker.
+
+R2(config-router)#do show ip bgp neighbors
+BGP neighbor is 3.3.3.3,  remote AS 230, internal link
+  BGP version 4, remote router ID 0.0.0.0
+  BGP state = Active
+  Last read 00:00:51, last write 00:00:51, hold time is 180, keepalive interval is 60 seconds
+  Message statistics:
+    InQ depth is 0
+    OutQ depth is 0
+                         Sent       Rcvd
+    Opens:                  0          0
+    Notifications:          0          0
+    Updates:                0          0
+    Keepalives:             0          0
+    Route Refresh:          0          0
+    Total:                  0          0
+  Default minimum time between advertisement runs is 0 seconds
+
+ For address family: IPv4 Unicast
+  BGP table version 1, neighbor version 0/0
+ Output queue size : 0
+  Index 1, Offset 0, Mask 0x2
+  1 update-group member
+                                 Sent       Rcvd
+  Prefix activity:               ----       ----
+    Prefixes Current:               0          0
+    Prefixes Total:                 0          0
+    Implicit Withdraw:              0          0
+    Explicit Withdraw:              0          0
+    Used as bestpath:             n/a          0
+    Used as multipath:            n/a          0
+
+                                   Outbound    Inbound
+  Local Policy Denied Prefixes:    --------    -------
+    Total:                                0          0
+  Number of NLRIs in the update sent: max 0, min 0
+
+  Connections established 0; dropped 0
+  Last reset never
+  No active TCP connection
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#router bgp 230
+R2(config-router)#neighbor 3.3.3.3 update-source Loopback0
+R2(config-router)#
+*Mar  1 00:31:04.695: %BGP-5-ADJCHANGE: neighbor 3.3.3.3 Up
+R2(config-router)#do show ip bgp neighbor
+BGP neighbor is 3.3.3.3,  remote AS 230, internal link
+  BGP version 4, remote router ID 192.168.31.1
+  BGP state = Established, up for 00:00:38
+  Last read 00:00:08, last write 00:00:08, hold time is 180, keepalive interval is 60 seconds
+  Neighbor capabilities:
+    Route refresh: advertised and received(old & new)
+    Address family IPv4 Unicast: advertised and received
+  Message statistics:
+    InQ depth is 0
+    OutQ depth is 0
+                         Sent       Rcvd
+    Opens:                  1          1
+    Notifications:          0          0
+    Updates:                0          0
+    Keepalives:             2          2
+    Route Refresh:          0          0
+    Total:                  3          3
+  Default minimum time between advertisement runs is 0 seconds
+
+ For address family: IPv4 Unicast
+  BGP table version 1, neighbor version 1/0
+ Output queue size : 0
+  Index 1, Offset 0, Mask 0x2
+  1 update-group member
+                                 Sent       Rcvd
+  Prefix activity:               ----       ----
+    Prefixes Current:               0          0
+    Prefixes Total:                 0          0
+    Implicit Withdraw:              0          0
+    Explicit Withdraw:              0          0
+    Used as bestpath:             n/a          0
+    Used as multipath:            n/a          0
+
+                                   Outbound    Inbound
+  Local Policy Denied Prefixes:    --------    -------
+    Total:                                0          0
+  Number of NLRIs in the update sent: max 0, min 0
+
+  Connections established 1; dropped 0
+  Last reset never
+Connection state is ESTAB, I/O status: 1, unread input bytes: 0
+Connection is ECN Disabled, Mininum incoming TTL 0, Outgoing TTL 255
+Local host: 2.2.2.2, Local port: 60852
+Foreign host: 3.3.3.3, Foreign port: 179
+
+Enqueued packets for retransmit: 0, input: 0  mis-ordered: 0 (0 bytes)
+
+Event Timers (current time is 0x1D3BDC):
+Timer          Starts    Wakeups            Next
+Retrans             4          0             0x0
+TimeWait            0          0             0x0
+AckHold             2          0             0x0
+SendWnd             0          0             0x0
+KeepAlive           0          0             0x0
+GiveUp              0          0             0x0
+PmtuAger            0          0             0x0
+DeadWait            0          0             0x0
+
+iss: 4123949915  snduna: 4123949999  sndnxt: 4123949999     sndwnd:  16301
+irs: 3820351657  rcvnxt: 3820351741  rcvwnd:      16301  delrcvwnd:     83
+
+SRTT: 184 ms, RTTO: 1852 ms, RTV: 1668 ms, KRTT: 0 ms
+minRTT: 76 ms, maxRTT: 676 ms, ACK hold: 200 ms
+Flags: active open, nagle
+IP Precedence value : 6
+
+Datagrams (max data segment is 536 bytes):
+Rcvd: 5 (out of order: 0), with data: 2, total data bytes: 83
+Sent: 5 (retransmit: 0, fastretransmit: 0, partialack: 0, Second Congestion: 0), with data: 3, total data bytes: 83
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#router bgp 230
+R2(config-router)#neighbor 10.0.12.1 remote-as 100
+R2(config-router)#do show ip bgp summary
+BGP router identifier 192.168.21.1, local AS number 230
+BGP table version is 1, main routing table version 1
+
+Neighbor        V    AS MsgRcvd MsgSent   TblVer  InQ OutQ Up/Down  State/PfxRcd
+3.3.3.3         4   230       8       8        1    0    0 00:05:36        0
+10.0.12.1       4   100       0       0        0    0    0 never    Active
+R2(config-router)#
+*Mar  1 00:37:01.787: %BGP-5-ADJCHANGE: neighbor 10.0.12.1 Up
+R2(config-router)#do show ip bgp neighbors
+BGP neighbor is 3.3.3.3,  remote AS 230, internal link
+  BGP version 4, remote router ID 192.168.31.1
+  BGP state = Established, up for 00:06:08
+  Last read 00:00:08, last write 00:00:08, hold time is 180, keepalive interval is 60 seconds
+  Neighbor capabilities:
+    Route refresh: advertised and received(old & new)
+    Address family IPv4 Unicast: advertised and received
+  Message statistics:
+    InQ depth is 0
+    OutQ depth is 0
+                         Sent       Rcvd
+    Opens:                  1          1
+    Notifications:          0          0
+    Updates:                0          0
+    Keepalives:             8          8
+    Route Refresh:          0          0
+    Total:                  9          9
+  Default minimum time between advertisement runs is 0 seconds
+
+ For address family: IPv4 Unicast
+  BGP table version 1, neighbor version 1/0
+ Output queue size : 0
+  Index 1, Offset 0, Mask 0x2
+  1 update-group member
+                                 Sent       Rcvd
+  Prefix activity:               ----       ----
+    Prefixes Current:               0          0
+    Prefixes Total:                 0          0
+    Implicit Withdraw:              0          0
+    Explicit Withdraw:              0          0
+    Used as bestpath:             n/a          0
+    Used as multipath:            n/a          0
+
+                                   Outbound    Inbound
+  Local Policy Denied Prefixes:    --------    -------
+    Total:                                0          0
+  Number of NLRIs in the update sent: max 0, min 0
+
+  Connections established 1; dropped 0
+  Last reset never
+Connection state is ESTAB, I/O status: 1, unread input bytes: 0
+Connection is ECN Disabled, Mininum incoming TTL 0, Outgoing TTL 255
+Local host: 2.2.2.2, Local port: 60852
+Foreign host: 3.3.3.3, Foreign port: 179
+
+Enqueued packets for retransmit: 0, input: 0  mis-ordered: 0 (0 bytes)
+
+Event Timers (current time is 0x242D2C):
+Timer          Starts    Wakeups            Next
+Retrans            12          0             0x0
+TimeWait            0          0             0x0
+AckHold            10          8             0x0
+SendWnd             0          0             0x0
+KeepAlive           0          0             0x0
+GiveUp              0          0             0x0
+PmtuAger            0          0             0x0
+DeadWait            0          0             0x0
+
+iss: 4123949915  snduna: 4123950151  sndnxt: 4123950151     sndwnd:  16149
+irs: 3820351657  rcvnxt: 3820351893  rcvwnd:      16149  delrcvwnd:    235
+
+SRTT: 377 ms, RTTO: 1343 ms, RTV: 966 ms, KRTT: 0 ms
+minRTT: 76 ms, maxRTT: 676 ms, ACK hold: 200 ms
+Flags: active open, nagle
+IP Precedence value : 6
+
+Datagrams (max data segment is 536 bytes):
+Rcvd: 18 (out of order: 0), with data: 10, total data bytes: 235
+Sent: 21 (retransmit: 0, fastretransmit: 0, partialack: 0, Second Congestion: 0), with data: 11, total data bytes: 235
+
+BGP neighbor is 10.0.12.1,  remote AS 100, external link
+  BGP version 4, remote router ID 192.168.11.1
+  BGP state = Established, up for 00:02:31
+  Last read 00:00:32, last write 00:00:33, hold time is 180, keepalive interval is 60 seconds
+  Neighbor capabilities:
+    Route refresh: advertised and received(old & new)
+    Address family IPv4 Unicast: advertised and received
+  Message statistics:
+    InQ depth is 0
+    OutQ depth is 0
+                         Sent       Rcvd
+    Opens:                  1          1
+    Notifications:          0          0
+    Updates:                0          0
+    Keepalives:             5          5
+    Route Refresh:          0          0
+    Total:                  6          6
+  Default minimum time between advertisement runs is 30 seconds
+
+ For address family: IPv4 Unicast
+  BGP table version 1, neighbor version 1/0
+ Output queue size : 0
+  Index 2, Offset 0, Mask 0x4
+  2 update-group member
+                                 Sent       Rcvd
+  Prefix activity:               ----       ----
+    Prefixes Current:               0          0
+    Prefixes Total:                 0          0
+    Implicit Withdraw:              0          0
+    Explicit Withdraw:              0          0
+    Used as bestpath:             n/a          0
+    Used as multipath:            n/a          0
+
+                                   Outbound    Inbound
+  Local Policy Denied Prefixes:    --------    -------
+    Total:                                0          0
+  Number of NLRIs in the update sent: max 0, min 0
+
+  Connections established 1; dropped 0
+  Last reset never
+Connection state is ESTAB, I/O status: 1, unread input bytes: 0
+Connection is ECN Disabled, Mininum incoming TTL 0, Outgoing TTL 1
+Local host: 10.0.12.2, Local port: 18149
+Foreign host: 10.0.12.1, Foreign port: 179
+
+Enqueued packets for retransmit: 0, input: 0  mis-ordered: 0 (0 bytes)
+
+Event Timers (current time is 0x2458D4):
+Timer          Starts    Wakeups            Next
+Retrans             6          1             0x0
+TimeWait            0          0             0x0
+AckHold             4          3             0x0
+SendWnd             0          0             0x0
+KeepAlive           0          0             0x0
+GiveUp              0          0             0x0
+PmtuAger            0          0             0x0
+DeadWait            0          0             0x0
+
+iss: 1895866984  snduna: 1895867125  sndnxt: 1895867125     sndwnd:  16244
+irs: 2116615038  rcvnxt: 2116615179  rcvwnd:      16244  delrcvwnd:    140
+
+SRTT: 186 ms, RTTO: 1745 ms, RTV: 1559 ms, KRTT: 0 ms
+minRTT: 268 ms, maxRTT: 720 ms, ACK hold: 200 ms
+Flags: active open, nagle
+IP Precedence value : 6
+
+Datagrams (max data segment is 1460 bytes):
+Rcvd: 6 (out of order: 0), with data: 4, total data bytes: 140
+Sent: 10 (retransmit: 1, fastretransmit: 0, partialack: 0, Second Congestion: 0), with data: 5, total data bytes: 140
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#do show ip route
+Codes: C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route
+
+Gateway of last resort is not set
+
+     2.0.0.0/32 is subnetted, 1 subnets
+C       2.2.2.2 is directly connected, Loopback0
+B    192.168.31.0/24 [200/0] via 3.3.3.3, 00:01:26
+     3.0.0.0/32 is subnetted, 1 subnets
+O       3.3.3.3 [110/11] via 10.0.23.2, 00:18:32, Ethernet0/2
+B    192.168.11.0/24 [20/0] via 10.0.12.1, 00:02:07
+C    192.168.21.0/24 is directly connected, Loopback1
+     10.0.0.0/30 is subnetted, 3 subnets
+C       10.0.12.0 is directly connected, Ethernet0/0
+C       10.0.24.0 is directly connected, Ethernet0/1
+C       10.0.23.0 is directly connected, Ethernet0/2
+R2(config-router)#do show ip bgp
+BGP table version is 3, local router ID is 192.168.21.1
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal,
+              r RIB-failure, S Stale
+Origin codes: i - IGP, e - EGP, ? - incomplete
+
+   Network          Next Hop            Metric LocPrf Weight Path
+*> 192.168.11.0     10.0.12.1                0             0 100 i
+*>i192.168.31.0     3.3.3.3                  0    100      0 i
+R2(config-router)#exit
+R2(config)#exit
+R2#
+*Mar  1 00:46:30.839: %SYS-5-CONFIG_I: Configured from console by console
+R2#ping 192.168.11.1
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 192.168.11.1, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 16/82/304 ms
+R2#ping 192.168.11.0
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 192.168.11.0, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 20/22/28 ms
+R2#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+R2(config)#router bgp 230
+R2(config-router)#neighbor 3.3.3.3 next-hop-self
+R2(config-router)#router bgp 230
+R2(config-router)#neighbor 10.0.24.2 remote-as 400
+R2(config-router)#do show ipbgp summary
+*Mar  1 00:55:17.891: %BGP-5-ADJCHANGE: neighbor 10.0.24.2 Up
+R2(config-router)#do show ip bgp summary
+BGP router identifier 192.168.21.1, local AS number 230
+BGP table version is 3, main routing table version 3
+2 network entries using 234 bytes of memory
+2 path entries using 104 bytes of memory
+3/2 BGP path/bestpath attribute entries using 372 bytes of memory
+1 BGP AS-PATH entries using 24 bytes of memory
+0 BGP route-map cache entries using 0 bytes of memory
+0 BGP filter-list cache entries using 0 bytes of memory
+BGP using 734 total bytes of memory
+BGP activity 2/0 prefixes, 2/0 paths, scan interval 60 secs
+
+Neighbor        V    AS MsgRcvd MsgSent   TblVer  InQ OutQ Up/Down  State/PfxRcd
+3.3.3.3         4   230      29      30        3    0    0 00:25:11        1
+10.0.12.1       4   100      24      24        3    0    0 00:19:14        1
+10.0.24.2       4   400       6       6        3    0    0 00:00:58        0
+R2(config-router)#router bgp 230
+R2(config-router)#router bgp 230
+R2(config-router)#network 192.168.21.0 mask 255.255.255.0
+R2(config-router)#do show ip route
+Codes: C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route
+
+Gateway of last resort is not set
+
+     2.0.0.0/32 is subnetted, 1 subnets
+C       2.2.2.2 is directly connected, Loopback0
+B    192.168.31.0/24 [200/0] via 3.3.3.3, 00:21:24
+     3.0.0.0/32 is subnetted, 1 subnets
+O       3.3.3.3 [110/11] via 10.0.23.2, 00:38:31, Ethernet0/2
+B    192.168.42.0/24 [20/0] via 10.0.24.2, 00:01:08
+B    192.168.43.0/24 [20/0] via 10.0.24.2, 00:01:08
+B    192.168.11.0/24 [20/0] via 10.0.12.1, 00:22:06
+B    192.168.41.0/24 [20/0] via 10.0.24.2, 00:01:38
+C    192.168.21.0/24 is directly connected, Loopback1
+     10.0.0.0/30 is subnetted, 3 subnets
+C       10.0.12.0 is directly connected, Ethernet0/0
+C       10.0.24.0 is directly connected, Ethernet0/1
+C       10.0.23.0 is directly connected, Ethernet0/2
+B    192.168.52.0/24 [20/0] via 10.0.24.2, 00:00:45
+B    192.168.51.0/24 [20/0] via 10.0.24.2, 00:00:46
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#
+R2(config-router)#do show ip bgp
+BGP table version is 9, local router ID is 192.168.21.1
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal,
+              r RIB-failure, S Stale
+Origin codes: i - IGP, e - EGP, ? - incomplete
+
+   Network          Next Hop            Metric LocPrf Weight Path
+*> 192.168.11.0     10.0.12.1                0             0 100 i
+*> 192.168.21.0     0.0.0.0                  0         32768 i
+*>i192.168.31.0     3.3.3.3                  0    100      0 i
+*> 192.168.41.0     10.0.24.2                0             0 400 i
+* i                 10.0.34.2                0    100      0 400 i
+* i192.168.42.0     10.0.34.2                0    100      0 400 i
+*>                  10.0.24.2                0             0 400 i
+* i192.168.43.0     10.0.34.2                0    100      0 400 i
+*>                  10.0.24.2                0             0 400 i
+*> 192.168.51.0     10.0.24.2                              0 400 500 i
+* i                 10.0.35.2                0    100      0 500 i
+*> 192.168.52.0     10.0.24.2                              0 400 500 i
+* i                 10.0.35.2                0    100      0 500 i
+R2(config-router)#do show ip bgp
+BGP table version is 11, local router ID is 192.168.21.1
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal,
+              r RIB-failure, S Stale
+Origin codes: i - IGP, e - EGP, ? - incomplete
+
+   Network          Next Hop            Metric LocPrf Weight Path
+*> 192.168.11.0     10.0.12.1                0             0 100 i
+*> 192.168.21.0     0.0.0.0                  0         32768 i
+*>i192.168.31.0     3.3.3.3                  0    100      0 i
+*> 192.168.41.0     10.0.24.2                0             0 400 i
+* i                 3.3.3.3                  0    100      0 400 i
+* i192.168.42.0     3.3.3.3                  0    100      0 400 i
+*>                  10.0.24.2                0             0 400 i
+* i192.168.43.0     3.3.3.3                  0    100      0 400 i
+*>                  10.0.24.2                0             0 400 i
+*  192.168.51.0     10.0.24.2                              0 400 500 i
+*>i                 3.3.3.3                  0    100      0 500 i
+*  192.168.52.0     10.0.24.2                              0 400 500 i
+*>i                 3.3.3.3                  0    100      0 500 i
+R2(config-router)#route-map local_preference permit 10
+R2(config-route-map)#set local_preference 200
+                              ^
+% Invalid input detected at '^' marker.
+
+R2(config-route-map)#set local-preference 200
+R2(config-route-map)#neighbor 3.3.3.3 route-map local_preference in
+                      ^
+% Invalid input detected at '^' marker.
+
+R2(config-route-map)#exit
+R2(config)#router bgp 230
+R2(config-router)#neighbor 3.3.3.3 route-map local_preference in
+R2(config-router)#no neighbor 3.3.3.3 route-map local_preference in
+R2(config-router)#neighbor 3.3.3.3 route-map local_preference in
+R2(config-router)#clear ip bgp 3.3.3.3 soft
+                  ^
+% Invalid input detected at '^' marker.
+
+R2(config-router)#exit
+R2(config)#clear ip bgp 3.3.3.3 soft
+             ^
+% Invalid input detected at '^' marker.
+
+R2(config)#exit
+R2#ping 192.168.11.0
+*Mar  1 01:19:59.243: %SYS-5-CONFIG_I: Configured from console by console
+R2#clear ip bgp 3.3.3.3 soft
+R2#show ip bgp
+BGP table version is 17, local router ID is 192.168.21.1
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal,
+              r RIB-failure, S Stale
+Origin codes: i - IGP, e - EGP, ? - incomplete
+
+   Network          Next Hop            Metric LocPrf Weight Path
+*> 192.168.11.0     10.0.12.1                0             0 100 i
+*> 192.168.21.0     0.0.0.0                  0         32768 i
+*>i192.168.31.0     3.3.3.3                  0    200      0 i
+*  192.168.41.0     10.0.24.2                0             0 400 i
+*>i                 3.3.3.3                  0    200      0 400 i
+*>i192.168.42.0     3.3.3.3                  0    200      0 400 i
+*                   10.0.24.2                0             0 400 i
+*>i192.168.43.0     3.3.3.3                  0    200      0 400 i
+*                   10.0.24.2                0             0 400 i
+*  192.168.51.0     10.0.24.2                              0 400 500 i
+*>i                 3.3.3.3                  0    200      0 500 i
+*  192.168.52.0     10.0.24.2                              0 400 500 i
+*>i                 3.3.3.3                  0    200      0 500 i
+R2#show ip bgp
+BGP table version is 23, local router ID is 192.168.21.1
+Status codes: s suppressed, d damped, h history, * valid, > best, i - internal,
+              r RIB-failure, S Stale
+Origin codes: i - IGP, e - EGP, ? - incomplete
+
+   Network          Next Hop            Metric LocPrf Weight Path
+*> 192.168.11.0     10.0.12.1                0             0 100 i
+*> 192.168.21.0     0.0.0.0                  0         32768 i
+*>i192.168.31.0     3.3.3.3                  0    200      0 i
+*  192.168.41.0     10.0.24.2                0             0 400 i
+*>i                 3.3.3.3                  0    200      0 400 i
+*>i192.168.42.0     3.3.3.3                  0    200      0 400 i
+*                   10.0.24.2                0             0 400 i
+*>i192.168.43.0     3.3.3.3                  0    200      0 400 i
+*                   10.0.24.2                0             0 400 i
+*>i192.168.48.0/21  3.3.3.3                  0    200      0 500 i
+R2#show running-config
+Building configuration...
+
+Current configuration : 1547 bytes
+!
+version 12.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname R2
+!
+boot-start-marker
+boot-end-marker
+!
+!
+no aaa new-model
+memory-size iomem 5
+no ip icmp rate-limit unreachable
+!
+!
+ip cef
+no ip domain lookup
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+ip tcp synwait-time 5
+!
+!
+!
+interface Loopback0
+ ip address 2.2.2.2 255.255.255.255
+!
+interface Loopback1
+ ip address 192.168.21.1 255.255.255.0
+!
+interface Ethernet0/0
+ ip address 10.0.12.2 255.255.255.252
+ half-duplex
+!
+interface Ethernet0/1
+ ip address 10.0.24.1 255.255.255.252
+ half-duplex
+!
+interface Ethernet0/2
+ ip address 10.0.23.1 255.255.255.252
+ half-duplex
+!
+interface Ethernet0/3
+ no ip address
+ shutdown
+ half-duplex
+!
+!
+router ospf 1
+ log-adjacency-changes
+ network 2.2.2.2 0.0.0.0 area 0
+ network 10.0.23.0 0.0.0.3 area 0
+!
+router bgp 230
+ no synchronization
+ bgp log-neighbor-changes
+ network 192.168.21.0
+ neighbor 3.3.3.3 remote-as 230
+ neighbor 3.3.3.3 update-source Loopback0
+ neighbor 3.3.3.3 next-hop-self
+ neighbor 3.3.3.3 route-map local_preference in
+ neighbor 10.0.12.1 remote-as 100
+ neighbor 10.0.24.2 remote-as 400
+ no auto-summary
+!
+no ip http server
+ip forward-protocol nd
+!
+!
+!
+!
+route-map local_preference permit 10
+ set local-preference 200
+!
+!
+!
+control-plane
+!
+!
+!
+!
+!
+!
+!
+!
+banner motd ^C 2022-01-18 18:00:05 IVJ3nCnyJvMASbrF ^C
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+line vty 0 4
+ login
+!
+!
+end
+
+R2#
+R2#
+R2#
+R2#
+R2#
+R2#
+R2#
+R2#
