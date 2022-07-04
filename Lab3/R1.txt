@@ -1,0 +1,1371 @@
+     +--------------------------------------------------------------------+
+     ¦                • MobaXterm Personal Edition v21.4 •                ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.0.115:0.0                         ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦ • Important:                                                       ¦
+     ¦ This is MobaXterm Personal Edition. The Professional edition       ¦
+     ¦ allows you to customize MobaXterm for your company: you can add    ¦
+     ¦ your own logo, your parameters, your welcome message and generate  ¦
+     ¦ either an MSI installation package or a portable executable.       ¦
+     ¦ We can also modify MobaXterm or develop the plugins you need.      ¦
+     ¦ For more information: https://mobaxterm.mobatek.net/download.html  ¦
+     +--------------------------------------------------------------------+
+
+ ? 30/11/2021 ? ? 16:30.49 ? ? /home/mobaxterm ? telnet -e# 10.14.0.224 51101
+Telnet escape character is '#'.
+Trying 10.14.0.224...
+Connected to 10.14.0.224.
+Escape character is '#'.
+Connected to Dynamips VM "R1" (ID 2, type c3600) - Console port
+Press ENTER to get the prompt.
+ROMMON emulation microcode.
+
+                           Launching IOS image at 0x80008000...
+
+                                                               Smart Init is disabled. IOMEM set to: 5
+
+                  Using iomem percentage: 5
+
+              Restricted Rights Legend
+
+Use, duplication, or disclosure by the Government is
+subject to restrictions as set forth in subparagraph
+(c) of the Commercial Computer Software - Restricted
+Rights clause at FAR sec. 52.227-19 and subparagraph
+(c) (1) (ii) of the Rights in Technical Data and Computer
+Software clause at DFARS sec. 252.227-7013.
+
+           cisco Systems, Inc.
+           170 West Tasman Drive
+           San Jose, California 95134-1706
+
+
+
+Cisco IOS Software, 3600 Software (C3640-A3JS-M), Version 12.4(25d), RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2010 by Cisco Systems, Inc.
+Compiled Wed 18-Aug-10 06:58 by prod_rel_team
+
+Cisco 3640 (R4700) processor (revision 0xFF) with 124928K/6144K bytes of memory.
+Processor board ID FF1045C5
+R4700 CPU at 100MHz, Implementation 33, Rev 1.2
+4 Ethernet interfaces
+DRAM configuration is 64 bits wide with parity enabled.
+125K bytes of NVRAM.
+8192K bytes of processor board System flash (Read/Write)
+
+SETUP: new interface Ethernet0/0 placed in "shutdown" state
+SETUP: new interface Ethernet0/1 placed in "shutdown" state
+SETUP: new interface Ethernet0/2 placed in "shutdown" state
+SETUP: new interface Ethernet0/3 placed in "shutdown" state
+% There may not be enough space available to collect the complete crashinfo
+% It would be advisable to have 280755 bytes free space on flash:crashinfo
+
+
+Press RETURN to get started!
+
+
+*Mar  1 00:00:11.083: %LINEPROTO-5-UPDOWN: Line protocol on Interface VoIP-Null0, changed state to up
+*Mar  1 00:00:11.091: %LINK-3-UPDOWN: Interface Ethernet0/0, changed state to up
+*Mar  1 00:00:11.095: %LINK-3-UPDOWN: Interface Ethernet0/1, changed state to up
+*Mar  1 00:00:11.103: %LINK-3-UPDOWN: Interface Ethernet0/2, changed state to up
+*Mar  1 00:00:11.107: %LINK-3-UPDOWN: Interface Ethernet0/3, changed state to up
+*Mar  1 00:00:11.115: %LINEPROTO-5-UPDOWN: Line protocol on Interface IPv6-mpls, changed state to up
+*Mar  1 00:00:12.099: %SYS-5-CONFIG_I: Configured from memory by console
+*Mar  1 00:00:12.199: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/0, changed state to down
+*Mar  1 00:00:12.199: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/1, changed state to down
+*Mar  1 00:00:12.199: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/2, changed state to down
+*Mar  1 00:00:12.199: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/3, changed state to down
+*Mar  1 00:00:12.983: %SYS-5-RESTART: System restarted --
+Cisco IOS Software, 3600 Software (C3640-A3JS-M), Version 12.4(25d), RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2010 by Cisco Systems, Inc.
+Compiled Wed 18-Aug-10 06:58 by prod_rel_team
+*Mar  1 00:00:13.019: %SNMP-5-COLDSTART: SNMP agent on host R1 is undergoing a cold start
+*Mar  1 00:00:14.099: %LINK-5-CHANGED: Interface Ethernet0/0, changed state to administratively down
+*Mar  1 00:00:14.107: %LINK-5-CHANGED: Interface Ethernet0/1, changed state to administratively down
+*Mar  1 00:00:14.115: %LINK-5-CHANGED: Interface Ethernet0/2, changed state to administratively down
+*Mar  1 00:00:14.123: %LINK-5-CHANGED: Interface Ethernet0/3, changed state to administratively down 2021-11-30 17:00:15 Jse3kQMKZwZifkJW
+R1#
+R1#config terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#interface ethernet 0/0
+R1(config-if)#ip address 192.168.11.1 255.255.255.252
+R1(config-if)#no shutdown
+R1(config-if)#interface
+*Mar  1 00:03:40.443: %LINK-3-UPDOWN: Interface Ethernet0/0, changed state to up
+*Mar  1 00:03:41.443: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/0, changed state to up
+R1(config-if)#interface loopback 1
+R1(config-if)#ip
+*Mar  1 00:03:48.523: %LINEPROTO-5-UPDOWN: Line protocol on Interface Loopback1, changed state to up
+R1(config-if)#ip address 192.168.0.1 255.255.255.255
+R1(config-if)#no shutdown
+R1(config-if)#do show cdp neighbors
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+R1(config-if)#do show cdp neighbors
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+R2               Eth 0/0            177        R S I      3640      Eth 0/0
+R1(config-if)#do show cdp neighbors
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+R2               Eth 0/0            152        R S I      3640      Eth 0/0
+R1(config-if)#do show ip route
+Codes: C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route
+
+Gateway of last resort is not set
+
+     192.168.11.0/30 is subnetted, 1 subnets
+C       192.168.11.0 is directly connected, Ethernet0/0
+     192.168.0.0/32 is subnetted, 1 subnets
+C       192.168.0.1 is directly connected, Loopback1
+R1(config-if)#router ospf 1
+R1(config-router)#network 192.168.11.1 0.0.0.3 area 0
+R1(config-router)#network 192.168.0.1 0.0.0.0 area 0
+R1(config-router)#
+*Mar  1 00:33:19.815: %OSPF-5-ADJCHG: Process 1, Nbr 192.168.0.2 on Ethernet0/0 from LOADING to FULL, Loading Done
+R1(config-router)#exit
+R1(config)#no route 1692.168.0.1 255.255.255.255 Loopback1
+                                    ^
+% Invalid input detected at '^' marker.
+
+R1(config)#no route 1692.168.0.0 255.255.255.255 Loopback1
+                                    ^
+% Invalid input detected at '^' marker.
+
+R1(config)#no ip route 1692.168.0.1 255.255.255.255 Loopback1
+                          ^
+% Invalid input detected at '^' marker.
+
+R1(config)#no ip route 192.168.0.1 255.255.255.255 Loopback1
+%No matching route to delete
+R1(config)#no ip route 192.168.0.0 255.255.255.255 Loopback1
+%No matching route to delete
+R1(config)#configure replace nvram:startup-config
+                   ^
+% Invalid input detected at '^' marker.
+
+R1(config)#do configure replace nvram:startup-config
+Already in Configure mode
+R1(config)#exit
+R1#config terminal
+*Mar  1 00:52:51.563: %SYS-5-CONFIG_I: Configured from console by console
+R1#configure replace nvram:startup-config
+This will apply all necessary additions and deletions
+to replace the current running configuration with the
+contents of the specified configuration file, which is
+assumed to be a complete configuration, not a partial
+configuration. Enter Y if you are sure you want to proceed. ? [no]: Y
+
+*Mar  1 00:53:16.415: Rollback:Acquired Configuration lock.
+Overwriting with a file sized 50% or less than running config's. Proceed? [no]: Y
+Smart-init will be enabled upon reload.
+
+The rollback configlet from the last pass is listed below:
+********
+
+!List of Commands:
+default service timestamps debug uptime
+default service timestamps log uptime
+default service password-encryption
+no boot-start-marker
+
+no boot-end-marker
+
+default ip cef
+no ip tcp synwait-time 5
+interface Ethernet0/0
+ no half-duplex
+interface Ethernet0/1
+ no half-duplex
+interface Ethernet0/2
+ no half-duplex
+interface Ethernet0/3
+ no half-duplex
+default ip http server
+ --More--
+%OSPF-5-ADJCHG: Process 1, Nbr 192.168.0.2 on Ethernet0/0 from FULL to DOWN, Neighbor Down: Interface down or detached
+%LINK-5-CHANGED: Interface Loopback1, changed state to administratively down
+%LINK-3-UPDOWN: Interface Ethernet0/1, changed state to up
+%LINK-3-UPDOWN: Interface Ethernet0/2, changed state to up
+%LINK-3-UPDOWN: Interface Ethernet0/3, changed state to up
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Loopback1, changed state to down
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/1, changed state to up
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/2, changed state to up
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/3, changed state to up
+no ip forward-protocol nd
+no banner motd
+line vty 0 4
+ no login
+banner motd # 2021-11-30 17:00:15 Jse3kQMKZwZifkJW #
+ip tcp synwait 5
+line con 0
+ no login
+line aux 0
+ no login
+end
+********
+
+
+Rollback aborted after 5 passes
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+%PARSER-3-CONFIGNOTLOCKED: Unlock requested by process '32'. Configuration not locked.
+R1#show IP int brief
+Interface                  IP-Address      OK? Method Status                Protocol
+Ethernet0/0                unassigned      YES manual up                    up
+Ethernet0/1                unassigned      YES unset  up                    up
+Ethernet0/2                unassigned      YES unset  up                    up
+Ethernet0/3                unassigned      YES unset  up                    up
+R1#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#interface ethernet 0/0
+R1(config-if)#ip address 192.168.11.1 255.255.255.252
+R1(config-if)#no shutdown
+R1(config-if)#interface l
+R1(config-if)#interface loo
+R1(config-if)#interface lo
+R1(config-if)#interface lo
+R1(config-if)#interface lop
+R1(config-if)#interface lop
+R1(config-if)#interface loo
+R1(config-if)#interface loo
+R1(config-if)#interface Loopback0
+R1(config-if)#
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Loopback0, changed state to up
+R1(config-if)#ip address 192.168.0.1 255.255.255.255
+R1(config-if)#no shutdown
+R1(config-if)#do show cdp neighbors
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+R2               Eth 0/0            136        R S I      3640      Eth 0/0
+R1(config-if)#do show ip route
+Codes: C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route
+
+Gateway of last resort is not set
+
+     192.168.11.0/30 is subnetted, 1 subnets
+C       192.168.11.0 is directly connected, Ethernet0/0
+     192.168.0.0/32 is subnetted, 1 subnets
+C       192.168.0.1 is directly connected, Loopback0
+R1(config-if)#exit
+R1(config)#router ospf 1
+R1(config-router)#network 192.168.11.1 0.0.0.3 area 0
+R1(config-router)#network 192.168.0.1 0.0.0.0 area 0
+R1(config-router)#
+%OSPF-5-ADJCHG: Process 1, Nbr 192.168.0.2 on Ethernet0/0 from LOADING to FULL, Loading Done
+R1(config-router)#do show ip ospf
+ Routing Process "ospf 1" with ID 192.168.0.1
+ Start time: 01:11:32.512, Time elapsed: 00:07:03.448
+ Supports only single TOS(TOS0) routes
+ Supports opaque LSA
+ Supports Link-local Signaling (LLS)
+ Supports area transit capability
+ Router is not originating router-LSAs with maximum metric
+ Initial SPF schedule delay 5000 msecs
+ Minimum hold time between two consecutive SPFs 10000 msecs
+ Maximum wait time between two consecutive SPFs 10000 msecs
+ Incremental-SPF disabled
+ Minimum LSA interval 5 secs
+ Minimum LSA arrival 1000 msecs
+ LSA group pacing timer 240 secs
+ Interface flood pacing timer 33 msecs
+ Retransmission pacing timer 66 msecs
+ Number of external LSA 0. Checksum Sum 0x000000
+ Number of opaque AS LSA 0. Checksum Sum 0x000000
+ Number of DCbitless external and opaque AS LSA 0
+ Number of DoNotAge external and opaque AS LSA 0
+ Number of areas in this router is 1. 1 normal 0 stub 0 nssa
+ Number of areas transit capable is 0
+ External flood list length 0
+    Area BACKBONE(0)
+        Number of interfaces in this area is 2 (1 loopback)
+        Area has no authentication
+        SPF algorithm last executed 00:00:09.768 ago
+        SPF algorithm executed 19 times
+        Area ranges are
+        Number of LSA 11. Checksum Sum 0x057439
+        Number of opaque link LSA 0. Checksum Sum 0x000000
+        Number of DCbitless LSA 0
+        Number of indication LSA 0
+        Number of DoNotAge LSA 0
+        Flood list length 0
+
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#do show ip route
+Codes: C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route
+
+Gateway of last resort is not set
+
+     192.168.10.0/30 is subnetted, 5 subnets
+O       192.168.10.0 [110/20] via 192.168.11.2, 00:00:48, Ethernet0/0
+O       192.168.10.4 [110/20] via 192.168.11.2, 00:00:48, Ethernet0/0
+O       192.168.10.8 [110/30] via 192.168.11.2, 00:00:48, Ethernet0/0
+O       192.168.10.12 [110/30] via 192.168.11.2, 00:00:48, Ethernet0/0
+O       192.168.10.16 [110/30] via 192.168.11.2, 00:00:48, Ethernet0/0
+     192.168.11.0/30 is subnetted, 1 subnets
+C       192.168.11.0 is directly connected, Ethernet0/0
+     192.168.0.0/32 is subnetted, 5 subnets
+C       192.168.0.1 is directly connected, Loopback0
+O       192.168.0.2 [110/11] via 192.168.11.2, 00:00:49, Ethernet0/0
+O       192.168.0.3 [110/21] via 192.168.11.2, 00:00:49, Ethernet0/0
+O       192.168.0.4 [110/21] via 192.168.11.2, 00:00:49, Ethernet0/0
+O       192.168.0.5 [110/31] via 192.168.11.2, 00:02:00, Ethernet0/0
+R1(config-router)#
+R1(config-router)#router ospf 1
+R1(config-router)#network 192.168.11.1 0.0.0.3 area 1
+R1(config-router)#
+%OSPF-5-ADJCHG: Process 1, Nbr 192.168.0.2 on Ethernet0/0 from FULL to DOWN, Neighbor Down: Interface down or detached
+R1(config-router)#
+%OSPF-6-AREACHG: 192.168.11.0/30 changed from area 0 to area 1
+R1(config-router)#
+%OSPF-4-ERRRCV: Received invalid packet: mismatch area ID, from backbone area must be virtual-link but not found from 192.168.11.2, Ethernet0/0
+R1(config-router)#
+%OSPF-4-ERRRCV: Received invalid packet: mismatch area ID, from backbone area must be virtual-link but not found from 192.168.11.2, Ethernet0/0
+R1(config-router)#
+%OSPF-4-ERRRCV: Received invalid packet: mismatch area ID, from backbone area must be virtual-link but not found from 192.168.11.2, Ethernet0/0
+R1(config-router)#do show ip ospf
+ Routing Process "ospf 1" with ID 192.168.0.1
+ Start time: 01:11:32.512, Time elapsed: 00:24:05.592
+ Supports only single TOS(TOS0) routes
+ Supports opaque LSA
+ Supports Link-local Signaling (LLS)
+ Supports area transit capability
+ It is an area border router
+ Router is not originating router-LSAs with maximum metric
+ Initial SPF schedule delay 5000 msecs
+ Minimum hold time between two consecutive SPFs 10000 msecs
+ Maximum wait time between two consecutive SPFs 10000 msecs
+ Incremental-SPF disabled
+ Minimum LSA interval 5 secs
+ Minimum LSA arrival 1000 msecs
+ LSA group pacing timer 240 secs
+ Interface flood pacing timer 33 msecs
+ Retransmission pacing timer 66 msecs
+ Number of external LSA 0. Checksum Sum 0x000000
+ Number of opaque AS LSA 0. Checksum Sum 0x000000
+ Number of DCbitless external and opaque AS LSA 0
+ Number of DoNotAge external and opaque AS LSA 0
+ Number of areas in this router is 2. 2 normal 0 stub 0 nssa
+ Number of areas transit capable is 0
+ External flood list length 0
+    Area BACKBONE(0) (Inactive)
+        Number of interfaces in this area is 1 (1 loopback)
+        Area has no authentication
+        SPF algorithm last executed 00:00:56.220 ago
+        SPF algorithm executed 29 times
+        Area ranges are
+        Number of LSA 7. Checksum Sum 0x03B1C4
+        Number of opaque link LSA 0. Checksum Sum 0x000000
+        Number of DCbitless LSA 0
+        Number of indication LSA 0
+        Number of DoNotAge LSA 0
+        Flood list length 0
+    Area 1
+        Number of interfaces in this area is 1
+        Area has no authentication
+        SPF algorithm last executed 00:01:04.100 ago
+        SPF algorithm executed 2 times
+ --More--
+%OSPF-5-ADJCHG: Process 1, Nbr 192.168.0.2 on Ethernet0/0 from LOADING to FULL, Loading Done
+        Area ranges are
+        Number of LSA 13. Checksum Sum 0x05F493
+        Number of opaque link LSA 0. Checksum Sum 0x000000
+        Number of DCbitless LSA 0
+        Number of indication LSA 0
+        Number of DoNotAge LSA 0
+        Flood list length 0
+
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#do show ip ospf database
+
+            OSPF Router with ID (192.168.0.1) (Process ID 1)
+
+                Router Link States (Area 0)
+
+Link ID         ADV Router      Age         Seq#       Checksum Link count
+192.168.0.1     192.168.0.1     91          0x80000004 0x00BE30 1
+192.168.0.2     192.168.0.2     576         0x80000009 0x004191 6
+192.168.0.3     192.168.0.3     522         0x8000000A 0x006543 6
+192.168.0.4     192.168.0.4     471         0x8000000A 0x001983 6
+192.168.0.5     192.168.0.5     420         0x80000009 0x00B6ED 5
+
+                Net Link States (Area 0)
+
+Link ID         ADV Router      Age         Seq#       Checksum
+192.168.10.13   192.168.0.3     1159        0x80000001 0x00DD98
+
+                Summary Net Link States (Area 0)
+
+Link ID         ADV Router      Age         Seq#       Checksum
+192.168.11.0    192.168.0.1     86          0x80000001 0x009EB8
+
+                Router Link States (Area 1)
+
+Link ID         ADV Router      Age         Seq#       Checksum Link count
+192.168.0.1     192.168.0.1     22          0x80000002 0x0091D5 1
+192.168.0.2     192.168.0.2     28          0x80000002 0x008FD4 1
+
+                Net Link States (Area 1)
+
+Link ID         ADV Router      Age         Seq#       Checksum
+192.168.11.2    192.168.0.2     28          0x80000001 0x001372
+
+                Summary Net Link States (Area 1)
+
+Link ID         ADV Router      Age         Seq#       Checksum
+192.168.0.1     192.168.0.1     86          0x80000002 0x00C3A2
+192.168.0.2     192.168.0.2     70          0x80000001 0x00B5AF
+192.168.0.3     192.168.0.2     71          0x80000001 0x00104A
+192.168.0.4     192.168.0.2     71          0x80000001 0x000653
+192.168.0.5     192.168.0.2     71          0x80000001 0x0060ED
+192.168.10.0    192.168.0.2     71          0x80000001 0x00A3B3
+192.168.10.4    192.168.0.2     71          0x80000001 0x007BD7
+192.168.10.8    192.168.0.2     71          0x80000001 0x00B78D
+192.168.10.12   192.168.0.2     71          0x80000001 0x008FB1
+192.168.10.16   192.168.0.2     71          0x80000001 0x0067D5
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#do show ip ospf database summary
+
+            OSPF Router with ID (192.168.0.1) (Process ID 1)
+
+                Summary Net Link States (Area 0)
+
+  LS age: 286
+  Options: (No TOS-capability, DC, Upward)
+  LS Type: Summary Links(Network)
+  Link State ID: 192.168.11.0 (summary Network Number)
+  Advertising Router: 192.168.0.1
+  LS Seq Number: 80000001
+  Checksum: 0x9EB8
+  Length: 28
+  Network Mask: /30
+        TOS: 0  Metric: 10
+
+
+                Summary Net Link States (Area 1)
+
+  LS age: 281
+  Options: (No TOS-capability, DC, Upward)
+  LS Type: Summary Links(Network)
+  Link State ID: 192.168.0.1 (summary Network Number)
+
+R1(config-router)#router ospf 1
+R1(config-router)#network 192.168.11.1 0.0.0.3 area 1
+R1(config-router)#do show ip ospf database summary
+
+            OSPF Router with ID (192.168.0.1) (Process ID 1)
+
+                Summary Net Link States (Area 0)
+
+  LS age: 428
+  Options: (No TOS-capability, DC, Upward)
+  LS Type: Summary Links(Network)
+  Link State ID: 192.168.11.0 (summary Network Number)
+  Advertising Router: 192.168.0.1
+  LS Seq Number: 80000001
+  Checksum: 0x9EB8
+  Length: 28
+  Network Mask: /30
+        TOS: 0  Metric: 10
+
+
+                Summary Net Link States (Area 1)
+
+  LS age: 423
+  Options: (No TOS-capability, DC, Upward)
+  LS Type: Summary Links(Network)
+  Link State ID: 192.168.0.1 (summary Network Number)
+  Advertising Router: 192.168.0.1
+  LS Seq Number: 80000002
+  Checksum: 0xC3A2
+  Length: 28
+  Network Mask: /32
+        TOS: 0  Metric: 1
+
+  Routing Bit Set on this LSA
+  LS age: 408
+  Options: (No TOS-capability, DC, Upward)
+  LS Type: Summary Links(Network)
+  Link State ID: 192.168.0.2 (summary Network Number)
+  Advertising Router: 192.168.0.2
+  LS Seq Number: 80000001
+  Checksum: 0xB5AF
+  Length: 28
+  Network Mask: /32
+        TOS: 0  Metric: 1
+
+  Routing Bit Set on this LSA
+  LS age: 410
+  Options: (No TOS-capability, DC, Upward)
+  LS Type: Summary Links(Network)
+  Link State ID: 192.168.0.3 (summary Network Number)
+  Advertising Router: 192.168.0.2
+  LS Seq Number: 80000001
+  Checksum: 0x104A
+  Length: 28
+  Network Mask: /32
+        TOS: 0  Metric: 11
+
+  Routing Bit Set on this LSA
+  LS age: 411
+  Options: (No TOS-capability, DC, Upward)
+  LS Type: Summary Links(Network)
+  Link State ID: 192.168.0.4 (summary Network Number)
+  Advertising Router: 192.168.0.2
+  LS Seq Number: 80000001
+  Checksum: 0x653
+  Length: 28
+  Network Mask: /32
+        TOS: 0  Metric: 11
+
+  Routing Bit Set on this LSA
+  LS age: 412
+  Options: (No TOS-capability, DC, Upward)
+  LS Type: Summary Links(Network)
+  Link State ID: 192.168.0.5 (summary Network Number)
+  Advertising Router: 192.168.0.2
+  LS Seq Number: 80000001
+  Checksum: 0x60ED
+  Length: 28
+  Network Mask: /32
+        TOS: 0  Metric: 21
+
+  Routing Bit Set on this LSA
+  LS age: 413
+  Options: (No TOS-capability, DC, Upward)
+  LS Type: Summary Links(Network)
+  Link State ID: 192.168.10.0 (summary Network Number)
+  Advertising Router: 192.168.0.2
+  LS Seq Number: 80000001
+  Checksum: 0xA3B3
+  Length: 28
+  Network Mask: /30
+        TOS: 0  Metric: 10
+
+  Routing Bit Set on this LSA
+  LS age: 415
+  Options: (No TOS-capability, DC, Upward)
+  LS Type: Summary Links(Network)
+  Link State ID: 192.168.10.4 (summary Network Number)
+  Advertising Router: 192.168.0.2
+  LS Seq Number: 80000001
+  Checksum: 0x7BD7
+  Length: 28
+  Network Mask: /30
+        TOS: 0  Metric: 10
+
+  Routing Bit Set on this LSA
+  LS age: 416
+  Options: (No TOS-capability, DC, Upward)
+  LS Type: Summary Links(Network)
+  Link State ID: 192.168.10.8 (summary Network Number)
+  Advertising Router: 192.168.0.2
+  LS Seq Number: 80000001
+  Checksum: 0xB78D
+  Length: 28
+  Network Mask: /30
+        TOS: 0  Metric: 20
+
+  Routing Bit Set on this LSA
+  LS age: 416
+  Options: (No TOS-capability, DC, Upward)
+  LS Type: Summary Links(Network)
+  Link State ID: 192.168.10.12 (summary Network Number)
+  Advertising Router: 192.168.0.2
+  LS Seq Number: 80000001
+  Checksum: 0x8FB1
+  Length: 28
+  Network Mask: /30
+        TOS: 0  Metric: 20
+
+  Routing Bit Set on this LSA
+  LS age: 417
+  Options: (No TOS-capability, DC, Upward)
+  LS Type: Summary Links(Network)
+  Link State ID: 192.168.10.16 (summary Network Number)
+  Advertising Router: 192.168.0.2
+  LS Seq Number: 80000001
+  Checksum: 0x67D5
+  Length: 28
+  Network Mask: /30
+        TOS: 0  Metric: 20
+
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#router ospf 1
+R1(config-router)#network 192.168.11.0 0.0.0.3 area 1
+R1(config-router)#do show ip ospf database
+
+            OSPF Router with ID (192.168.0.1) (Process ID 1)
+
+                Router Link States (Area 0)
+
+Link ID         ADV Router      Age         Seq#       Checksum Link count
+192.168.0.1     192.168.0.1     735         0x80000004 0x00BE30 1
+192.168.0.2     192.168.0.2     1221        0x80000009 0x004191 6
+192.168.0.3     192.168.0.3     1166        0x8000000A 0x006543 6
+192.168.0.4     192.168.0.4     1116        0x8000000A 0x001983 6
+192.168.0.5     192.168.0.5     1064        0x80000009 0x00B6ED 5
+
+                Net Link States (Area 0)
+
+Link ID         ADV Router      Age         Seq#       Checksum
+192.168.10.13   192.168.0.3     1804        0x80000001 0x00DD98
+
+                Summary Net Link States (Area 0)
+
+Link ID         ADV Router      Age         Seq#       Checksum
+192.168.11.0    192.168.0.1     731         0x80000001 0x009EB8
+
+                Router Link States (Area 1)
+
+Link ID         ADV Router      Age         Seq#       Checksum Link count
+192.168.0.1     192.168.0.1     667         0x80000002 0x0091D5 1
+192.168.0.2     192.168.0.2     684         0x80000002 0x008FD4 1
+
+                Net Link States (Area 1)
+
+Link ID         ADV Router      Age         Seq#       Checksum
+192.168.11.2    192.168.0.2     684         0x80000001 0x001372
+
+                Summary Net Link States (Area 1)
+
+Link ID         ADV Router      Age         Seq#       Checksum
+192.168.0.1     192.168.0.1     743         0x80000002 0x00C3A2
+192.168.0.2     192.168.0.2     727         0x80000001 0x00B5AF
+192.168.0.3     192.168.0.2     727         0x80000001 0x00104A
+192.168.0.4     192.168.0.2     727         0x80000001 0x000653
+192.168.0.5     192.168.0.2     727         0x80000001 0x0060ED
+192.168.10.0    192.168.0.2     727         0x80000001 0x00A3B3
+192.168.10.4    192.168.0.2     727         0x80000001 0x007BD7
+192.168.10.8    192.168.0.2     727         0x80000001 0x00B78D
+192.168.10.12   192.168.0.2     728         0x80000001 0x008FB1
+192.168.10.16   192.168.0.2     729         0x80000001 0x0067D5
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#do show ip ospf database
+
+            OSPF Router with ID (192.168.0.1) (Process ID 1)
+
+                Router Link States (Area 0)
+
+Link ID         ADV Router      Age         Seq#       Checksum Link count
+192.168.0.1     192.168.0.1     871         0x80000004 0x00BE30 1
+192.168.0.2     192.168.0.2     1356        0x80000009 0x004191 6
+192.168.0.3     192.168.0.3     1302        0x8000000A 0x006543 6
+192.168.0.4     192.168.0.4     1251        0x8000000A 0x001983 6
+192.168.0.5     192.168.0.5     1200        0x80000009 0x00B6ED 5
+
+                Net Link States (Area 0)
+
+Link ID         ADV Router      Age         Seq#       Checksum
+192.168.10.13   192.168.0.3     1939        0x80000001 0x00DD98
+
+                Summary Net Link States (Area 0)
+
+Link ID         ADV Router      Age         Seq#       Checksum
+192.168.11.0    192.168.0.1     866         0x80000001 0x009EB8
+
+                Router Link States (Area 1)
+
+Link ID         ADV Router      Age         Seq#       Checksum Link count
+192.168.0.1     192.168.0.1     802         0x80000002 0x0091D5 1
+192.168.0.2     192.168.0.2     806         0x80000002 0x008FD4 1
+
+                Net Link States (Area 1)
+
+Link ID         ADV Router      Age         Seq#       Checksum
+192.168.11.2    192.168.0.2     806         0x80000001 0x001372
+
+                Summary Net Link States (Area 1)
+
+Link ID         ADV Router      Age         Seq#       Checksum
+192.168.0.1     192.168.0.1     865         0x80000002 0x00C3A2
+192.168.0.2     192.168.0.2     847         0x80000001 0x00B5AF
+192.168.0.3     192.168.0.2     847         0x80000001 0x00104A
+192.168.0.4     192.168.0.2     847         0x80000001 0x000653
+192.168.0.5     192.168.0.2     848         0x80000001 0x0060ED
+192.168.10.0    192.168.0.2     848         0x80000001 0x00A3B3
+192.168.10.4    192.168.0.2     849         0x80000001 0x007BD7
+192.168.10.8    192.168.0.2     849         0x80000001 0x00B78D
+192.168.10.12   192.168.0.2     850         0x80000001 0x008FB1
+192.168.10.16   192.168.0.2     850         0x80000001 0x0067D5
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#do show ip ospf neighbor
+
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+192.168.0.2       1   FULL/DR         00:00:38    192.168.11.2    Ethernet0/0
+R1(config-router)#router ospf 1
+R1(config-router)#network 192.168.0.1 0.0.0.0 area 1
+R1(config-router)#
+%OSPF-6-AREACHG: 192.168.0.1/32 changed from area 0 to area 1
+R1(config-router)#do show ip ospf neighbor
+
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+192.168.0.2       1   FULL/DR         00:00:39    192.168.11.2    Ethernet0/0
+R1(config-router)#do show ip ospf database
+
+            OSPF Router with ID (192.168.0.1) (Process ID 1)
+
+                Router Link States (Area 1)
+
+Link ID         ADV Router      Age         Seq#       Checksum Link count
+192.168.0.1     192.168.0.1     21          0x80000003 0x001ECD 2
+192.168.0.2     192.168.0.2     1244        0x80000002 0x008FD4 1
+
+                Net Link States (Area 1)
+
+Link ID         ADV Router      Age         Seq#       Checksum
+192.168.11.2    192.168.0.2     1244        0x80000001 0x001372
+
+                Summary Net Link States (Area 1)
+
+Link ID         ADV Router      Age         Seq#       Checksum
+192.168.0.2     192.168.0.2     1285        0x80000001 0x00B5AF
+192.168.0.3     192.168.0.2     1285        0x80000001 0x00104A
+192.168.0.4     192.168.0.2     1285        0x80000001 0x000653
+192.168.0.5     192.168.0.2     1285        0x80000001 0x0060ED
+192.168.10.0    192.168.0.2     1285        0x80000001 0x00A3B3
+192.168.10.4    192.168.0.2     1285        0x80000001 0x007BD7
+192.168.10.8    192.168.0.2     1285        0x80000001 0x00B78D
+192.168.10.12   192.168.0.2     1288        0x80000001 0x008FB1
+192.168.10.16   192.168.0.2     1288        0x80000001 0x0067D5
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#show ip ospf dataase summary
+                   ^
+% Invalid input detected at '^' marker.
+
+R1(config-router)#do show ip ospf database summary
+
+            OSPF Router with ID (192.168.0.1) (Process ID 1)
+
+                Summary Net Link States (Area 1)
+
+  Routing Bit Set on this LSA
+  LS age: 1331
+  Options: (No TOS-capability, DC, Upward)
+  LS Type: Summary Links(Network)
+  Link State ID: 192.168.0.2 (summary Network Number)
+  Advertising Router: 192.168.0.2
+  LS Seq Number: 80000001
+  Checksum: 0xB5AF
+  Length: 28
+  Network Mask: /32
+        TOS: 0  Metric: 1
+
+  Routing Bit Set on this LSA
+  LS age: 1331
+  Options: (No TOS-capability, DC, Upward)
+  LS Type: Summary Links(Network)
+  Link State ID: 192.168.0.3 (summary Network Number)
+  Advertising Router: 192.168.0.2
+  LS Seq Number: 80000001
+  Checksum: 0x104A
+  Length: 28
+  Network Mask: /32
+        TOS: 0  Metric: 11
+
+  Routing Bit Set on this LSA
+  LS age: 1338
+  Options: (No TOS-capability, DC, Upward)
+  LS Type: Summary Links(Network)
+  Link State ID: 192.168.0.4 (summary Network Number)
+  Advertising Router: 192.168.0.2
+  LS Seq Number: 80000001
+  Checksum: 0x653
+  Length: 28
+  Network Mask: /32
+        TOS: 0  Metric: 11
+
+  Routing Bit Set on this LSA
+  LS age: 1338
+  Options: (No TOS-capability, DC, Upward)
+  LS Type: Summary Links(Network)
+  Link State ID: 192.168.0.5 (summary Network Number)
+  Advertising Router: 192.168.0.2
+  LS Seq Number: 80000001
+  Checksum: 0x60ED
+  Length: 28
+  Network Mask: /32
+        TOS: 0  Metric: 21
+
+  Routing Bit Set on this LSA
+  LS age: 1340
+  Options: (No TOS-capability, DC, Upward)
+  LS Type: Summary Links(Network)
+  Link State ID: 192.168.10.0 (summary Network Number)
+  Advertising Router: 192.168.0.2
+  LS Seq Number: 80000001
+  Checksum: 0xA3B3
+  Length: 28
+  Network Mask: /30
+        TOS: 0  Metric: 10
+
+  Routing Bit Set on this LSA
+  LS age: 1342
+  Options: (No TOS-capability, DC, Upward)
+  LS Type: Summary Links(Network)
+  Link State ID: 192.168.10.4 (summary Network Number)
+  Advertising Router: 192.168.0.2
+  LS Seq Number: 80000001
+  Checksum: 0x7BD7
+  Length: 28
+  Network Mask: /30
+        TOS: 0  Metric: 10
+
+  Routing Bit Set on this LSA
+  LS age: 1342
+  Options: (No TOS-capability, DC, Upward)
+  LS Type: Summary Links(Network)
+  Link State ID: 192.168.10.8 (summary Network Number)
+  Advertising Router: 192.168.0.2
+  LS Seq Number: 80000001
+  Checksum: 0xB78D
+  Length: 28
+  Network Mask: /30
+        TOS: 0  Metric: 20
+
+  Routing Bit Set on this LSA
+  LS age: 1344
+  Options: (No TOS-capability, DC, Upward)
+  LS Type: Summary Links(Network)
+  Link State ID: 192.168.10.12 (summary Network Number)
+  Advertising Router: 192.168.0.2
+  LS Seq Number: 80000001
+  Checksum: 0x8FB1
+  Length: 28
+  Network Mask: /30
+        TOS: 0  Metric: 20
+
+  Routing Bit Set on this LSA
+  LS age: 1346
+  Options: (No TOS-capability, DC, Upward)
+  LS Type: Summary Links(Network)
+  Link State ID: 192.168.10.16 (summary Network Number)
+  Advertising Router: 192.168.0.2
+  LS Seq Number: 80000001
+  Checksum: 0x67D5
+  Length: 28
+  Network Mask: /30
+        TOS: 0  Metric: 20
+
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#do show ip route
+Codes: C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route
+
+Gateway of last resort is not set
+
+     192.168.10.0/30 is subnetted, 5 subnets
+O IA    192.168.10.0 [110/20] via 192.168.11.2, 00:01:52, Ethernet0/0
+O IA    192.168.10.4 [110/20] via 192.168.11.2, 00:01:52, Ethernet0/0
+O IA    192.168.10.8 [110/30] via 192.168.11.2, 00:01:52, Ethernet0/0
+O IA    192.168.10.12 [110/30] via 192.168.11.2, 00:01:52, Ethernet0/0
+O IA    192.168.10.16 [110/30] via 192.168.11.2, 00:01:52, Ethernet0/0
+     192.168.11.0/30 is subnetted, 1 subnets
+C       192.168.11.0 is directly connected, Ethernet0/0
+     192.168.0.0/32 is subnetted, 5 subnets
+C       192.168.0.1 is directly connected, Loopback0
+O IA    192.168.0.2 [110/11] via 192.168.11.2, 00:01:53, Ethernet0/0
+O IA    192.168.0.3 [110/21] via 192.168.11.2, 00:01:53, Ethernet0/0
+O IA    192.168.0.4 [110/21] via 192.168.11.2, 00:01:53, Ethernet0/0
+O IA    192.168.0.5 [110/31] via 192.168.11.2, 00:01:55, Ethernet0/0
+R1(config-router)#do show ip ospf database
+
+            OSPF Router with ID (192.168.0.1) (Process ID 1)
+
+                Router Link States (Area 1)
+
+Link ID         ADV Router      Age         Seq#       Checksum Link count
+192.168.0.1     192.168.0.1     843         0x80000003 0x001ECD 2
+192.168.0.2     192.168.0.2     12          0x80000004 0x0033B2 2
+
+                Net Link States (Area 1)
+
+Link ID         ADV Router      Age         Seq#       Checksum
+192.168.11.2    192.168.0.2     159         0x80000002 0x001173
+
+                Summary Net Link States (Area 1)
+
+Link ID         ADV Router      Age         Seq#       Checksum
+192.168.0.2     192.168.0.2     3606        0x80000003 0x00A7BC
+192.168.0.3     192.168.0.2     159         0x80000002 0x000E4B
+192.168.0.4     192.168.0.2     159         0x80000002 0x000454
+192.168.0.5     192.168.0.2     159         0x80000002 0x005EEE
+192.168.10.0    192.168.0.2     159         0x80000002 0x00A1B4
+192.168.10.4    192.168.0.2     159         0x80000002 0x0079D8
+192.168.10.8    192.168.0.2     159         0x80000002 0x00B58E
+192.168.10.12   192.168.0.2     161         0x80000002 0x008DB2
+192.168.10.16   192.168.0.2     162         0x80000002 0x0065D6
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#do show ip route
+Codes: C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route
+
+Gateway of last resort is not set
+
+     192.168.10.0/30 is subnetted, 5 subnets
+O IA    192.168.10.0 [110/20] via 192.168.11.2, 00:04:39, Ethernet0/0
+O IA    192.168.10.4 [110/20] via 192.168.11.2, 00:04:39, Ethernet0/0
+O IA    192.168.10.8 [110/30] via 192.168.11.2, 00:04:39, Ethernet0/0
+O IA    192.168.10.12 [110/30] via 192.168.11.2, 00:04:39, Ethernet0/0
+O IA    192.168.10.16 [110/30] via 192.168.11.2, 00:04:39, Ethernet0/0
+     192.168.11.0/30 is subnetted, 1 subnets
+C       192.168.11.0 is directly connected, Ethernet0/0
+     192.168.0.0/32 is subnetted, 5 subnets
+C       192.168.0.1 is directly connected, Loopback0
+O       192.168.0.2 [110/11] via 192.168.11.2, 00:04:41, Ethernet0/0
+O IA    192.168.0.3 [110/21] via 192.168.11.2, 00:04:41, Ethernet0/0
+O IA    192.168.0.4 [110/21] via 192.168.11.2, 00:04:41, Ethernet0/0
+O IA    192.168.0.5 [110/31] via 192.168.11.2, 00:04:42, Ethernet0/0
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#
+R1(config-router)#do show ip route
+Codes: C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route
+
+Gateway of last resort is not set
+
+     192.168.10.0/30 is subnetted, 5 subnets
+O IA    192.168.10.0 [110/20] via 192.168.11.2, 00:00:10, Ethernet0/0
+O IA    192.168.10.4 [110/20] via 192.168.11.2, 00:00:10, Ethernet0/0
+O IA    192.168.10.8 [110/30] via 192.168.11.2, 00:00:10, Ethernet0/0
+O IA    192.168.10.12 [110/30] via 192.168.11.2, 00:00:10, Ethernet0/0
+O IA    192.168.10.16 [110/30] via 192.168.11.2, 00:00:10, Ethernet0/0
+     192.168.11.0/30 is subnetted, 1 subnets
+C       192.168.11.0 is directly connected, Ethernet0/0
+     192.168.0.0/32 is subnetted, 5 subnets
+C       192.168.0.1 is directly connected, Loopback0
+O IA    192.168.0.2 [110/11] via 192.168.11.2, 00:00:12, Ethernet0/0
+O IA    192.168.0.3 [110/21] via 192.168.11.2, 00:00:12, Ethernet0/0
+O IA    192.168.0.4 [110/21] via 192.168.11.2, 00:00:12, Ethernet0/0
+O IA    192.168.0.5 [110/31] via 192.168.11.2, 00:00:13, Ethernet0/0
+R1(config-router)#do show ip interface brief
+Interface                  IP-Address      OK? Method Status                Protocol
+Ethernet0/0                192.168.11.1    YES manual up                    up
+Ethernet0/1                unassigned      YES unset  up                    up
+Ethernet0/2                unassigned      YES unset  up                    up
+Ethernet0/3                unassigned      YES unset  up                    up
+Loopback0                  192.168.0.1     YES manual up                    up
+R1(config-router)#interface ethernet 0/1
+R1(config-if)#shutdown
+R1(config-if)#interface ethernet 0/2
+R1(config-if)#
+%LINK-5-CHANGED: Interface Ethernet0/1, changed state to administratively down
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/1, changed state to down
+R1(config-if)#interface ethernet 0/2
+R1(config-if)#shutdown
+R1(config-if)#interface ethernet 0/
+%LINK-5-CHANGED: Interface Ethernet0/2, changed state to administratively down
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/2, changed state to down
+R1(config-if)#interface ethernet 0/3
+R1(config-if)#shutdown
+R1(config-if)#interface ethernet 0/1
+%LINK-5-CHANGED: Interface Ethernet0/3, changed state to administratively down
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/3, changed state to down
+R1(config-if)#do show ip interface brief
+Interface                  IP-Address      OK? Method Status                Protocol
+Ethernet0/0                192.168.11.1    YES manual up                    up
+Ethernet0/1                unassigned      YES unset  administratively down down
+Ethernet0/2                unassigned      YES unset  administratively down down
+Ethernet0/3                unassigned      YES unset  administratively down down
+Loopback0                  192.168.0.1     YES manual up                    up
+R1(config-if)#do show ip route
+Codes: C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route
+
+Gateway of last resort is not set
+
+     192.168.10.0/30 is subnetted, 5 subnets
+O IA    192.168.10.0 [110/20] via 192.168.11.2, 00:22:17, Ethernet0/0
+O IA    192.168.10.4 [110/20] via 192.168.11.2, 00:22:17, Ethernet0/0
+O IA    192.168.10.8 [110/30] via 192.168.11.2, 00:22:17, Ethernet0/0
+O IA    192.168.10.12 [110/30] via 192.168.11.2, 00:22:17, Ethernet0/0
+O IA    192.168.10.16 [110/30] via 192.168.11.2, 00:22:17, Ethernet0/0
+     192.168.11.0/30 is subnetted, 1 subnets
+C       192.168.11.0 is directly connected, Ethernet0/0
+     192.168.0.0/32 is subnetted, 5 subnets
+C       192.168.0.1 is directly connected, Loopback0
+O IA    192.168.0.2 [110/11] via 192.168.11.2, 00:22:18, Ethernet0/0
+O IA    192.168.0.3 [110/21] via 192.168.11.2, 00:22:18, Ethernet0/0
+O IA    192.168.0.4 [110/21] via 192.168.11.2, 00:22:18, Ethernet0/0
+O IA    192.168.0.5 [110/31] via 192.168.11.2, 00:22:22, Ethernet0/0
+R1(config-if)#no ospf
+                 ^
+% Invalid input detected at '^' marker.
+
+R1(config-if)#exit
+R1(config)#do show ip ospf neighbor
+
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+192.168.0.2       1   FULL/DR         00:00:33    192.168.11.2    Ethernet0/0
+R1(config)#router ospf 1
+R1(config-router)#shutdown
+                   ^
+% Invalid input detected at '^' marker.
+
+R1(config-router)#no ospf
+% Incomplete command.
+
+R1(config-router)#no ospf 1
+                          ^
+% Invalid input detected at '^' marker.
+
+R1(config-router)#shutdown
+                   ^
+% Invalid input detected at '^' marker.
+
+R1(config-router)#ospf suspend
+                       ^
+% Invalid input detected at '^' marker.
+
+R1(config-router)#disable
+                     ^
+% Invalid input detected at '^' marker.
+
+R1(config-router)#exit
+R1(config)#ospf shutdown
+            ^
+% Invalid input detected at '^' marker.
+
+R1(config)#ip ospf shutdown
+                   ^
+% Invalid input detected at '^' marker.
+
+R1(config)#do ip ospf shutdown
+ip ospf shutdown
+ ^
+% Invalid input detected at '^' marker.
+
+R1(config)#do ip ospf disable
+ip ospf disable
+ ^
+% Invalid input detected at '^' marker.
+
+R1(config)#router ospf 1
+R1(config-router)#shutdown
+                   ^
+% Invalid input detected at '^' marker.
+
+R1(config-router)#shutdown ?
+% Unrecognized command
+R1(config-router)#exit
+R1(config)#no router ospf
+% Incomplete command.
+
+R1(config)#no router ospf 1
+R1(config)#
+%OSPF-5-ADJCHG: Process 1, Nbr 192.168.0.2 on Ethernet0/0 from FULL to DOWN, Neighbor Down: Interface down or detached
+R1(config)#do show ip ospf neighbor
+
+R1(config)#router rip
+R1(config-router)#version 2
+R1(config-router)#network 192.168.11.0 255.255.255.252
+                                       ^
+% Invalid input detected at '^' marker.
+
+R1(config-router)#network 192.168.11.0
+R1(config-router)#do show ip route
+Codes: C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route
+
+Gateway of last resort is not set
+
+R    192.168.10.0/24 [120/2] via 192.168.11.2, 00:00:05, Ethernet0/0
+     192.168.11.0/30 is subnetted, 1 subnets
+C       192.168.11.0 is directly connected, Ethernet0/0
+     192.168.0.0/24 is variably subnetted, 2 subnets, 2 masks
+R       192.168.0.0/24 [120/2] via 192.168.11.2, 00:00:05, Ethernet0/0
+C       192.168.0.1/32 is directly connected, Loopback0
+R1(config-router)#exit
+R1(config)#exit
+R1#
+%SYS-5-CONFIG_I: Configured from console by console
+R1#show running-config
+Building configuration...
+
+Current configuration : 1000 bytes
+!
+version 12.4
+no service timestamps debug uptime
+no service timestamps log uptime
+no service password-encryption
+!
+hostname R1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+!
+!
+no ip cef
+no ip domain lookup
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+ip tcp synwait-time 5
+!
+!
+!
+interface Loopback0
+ ip address 192.168.0.1 255.255.255.255
+!
+interface Ethernet0/0
+ ip address 192.168.11.1 255.255.255.252
+ half-duplex
+!
+interface Ethernet0/1
+ no ip address
+ shutdown
+ half-duplex
+!
+interface Ethernet0/2
+ no ip address
+ shutdown
+ half-duplex
+!
+interface Ethernet0/3
+ no ip address
+ shutdown
+ half-duplex
+!
+!
+router rip
+ version 2
+ network 192.168.11.0
+!
+no ip http server
+no ip forward-protocol nd
+!
+!
+!
+!
+!
+!
+control-plane
+!
+!
+!
+!
+!
+!
+!
+!
+banner motd ^C 2021-11-30 17:00:15 Jse3kQMKZwZifkJW ^C
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+line vty 0 4
+ no login
+!
+!
+end
+
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#
+R1#

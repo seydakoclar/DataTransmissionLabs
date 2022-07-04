@@ -1,0 +1,899 @@
+     +--------------------------------------------------------------------+
+     ¦                • MobaXterm Personal Edition v21.4 •                ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.0.115:0.0                         ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦ • Important:                                                       ¦
+     ¦ This is MobaXterm Personal Edition. The Professional edition       ¦
+     ¦ allows you to customize MobaXterm for your company: you can add    ¦
+     ¦ your own logo, your parameters, your welcome message and generate  ¦
+     ¦ either an MSI installation package or a portable executable.       ¦
+     ¦ We can also modify MobaXterm or develop the plugins you need.      ¦
+     ¦ For more information: https://mobaxterm.mobatek.net/download.html  ¦
+     +--------------------------------------------------------------------+
+
+ ? 30/11/2021 ? ? 16:30.52 ? ? /home/mobaxterm ? telnet -e# 10.14.0.224 51104
+Telnet escape character is '#'.
+Trying 10.14.0.224...
+Connected to 10.14.0.224.
+Escape character is '#'.
+Connected to Dynamips VM "R4" (ID 0, type c3600) - Console port
+Press ENTER to get the prompt.
+ROMMON emulation microcode.
+
+                           Launching IOS image at 0x80008000...
+
+                                                               Smart Init is disabled. IOMEM set to: 5
+
+                  Using iomem percentage: 5
+
+              Restricted Rights Legend
+
+Use, duplication, or disclosure by the Government is
+subject to restrictions as set forth in subparagraph
+(c) of the Commercial Computer Software - Restricted
+Rights clause at FAR sec. 52.227-19 and subparagraph
+(c) (1) (ii) of the Rights in Technical Data and Computer
+Software clause at DFARS sec. 252.227-7013.
+
+           cisco Systems, Inc.
+           170 West Tasman Drive
+           San Jose, California 95134-1706
+
+
+
+Cisco IOS Software, 3600 Software (C3640-A3JS-M), Version 12.4(25d), RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2010 by Cisco Systems, Inc.
+Compiled Wed 18-Aug-10 06:58 by prod_rel_team
+
+Cisco 3640 (R4700) processor (revision 0xFF) with 124928K/6144K bytes of memory.
+Processor board ID FF1045C5
+R4700 CPU at 100MHz, Implementation 33, Rev 1.2
+4 Ethernet interfaces
+DRAM configuration is 64 bits wide with parity enabled.
+125K bytes of NVRAM.
+8192K bytes of processor board System flash (Read/Write)
+
+SETUP: new interface Ethernet0/0 placed in "shutdown" state
+SETUP: new interface Ethernet0/1 placed in "shutdown" state
+SETUP: new interface Ethernet0/2 placed in "shutdown" state
+SETUP: new interface Ethernet0/3 placed in "shutdown" state
+
+
+Press RETURN to get started!
+
+
+*Mar  1 00:00:11.071: %LINEPROTO-5-UPDOWN: Line protocol on Interface VoIP-Null0, changed state to up
+*Mar  1 00:00:11.079: %LINK-3-UPDOWN: Interface Ethernet0/0, changed state to up
+*Mar  1 00:00:11.083: %LINK-3-UPDOWN: Interface Ethernet0/1, changed state to up
+*Mar  1 00:00:11.091: %LINK-3-UPDOWN: Interface Ethernet0/2, changed state to up
+*Mar  1 00:00:11.095: %LINK-3-UPDOWN: Interface Ethernet0/3, changed state to up
+*Mar  1 00:00:11.103: %LINEPROTO-5-UPDOWN: Line protocol on Interface IPv6-mpls, changed state to up
+*Mar  1 00:00:12.079: %SYS-5-CONFIG_I: Configured from memory by console
+*Mar  1 00:00:12.167: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/0, changed state to down
+*Mar  1 00:00:12.171: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/1, changed state to down
+*Mar  1 00:00:12.171: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/2, changed state to down
+*Mar  1 00:00:12.175: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/3, changed state to down
+*Mar  1 00:00:12.963: %SYS-5-RESTART: System restarted --
+Cisco IOS Software, 3600 Software (C3640-A3JS-M), Version 12.4(25d), RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2010 by Cisco Systems, Inc.
+Compiled Wed 18-Aug-10 06:58 by prod_rel_team
+*Mar  1 00:00:13.003: %SNMP-5-COLDSTART: SNMP agent on host R4 is undergoing a cold start
+*Mar  1 00:00:14.087: %LINK-5-CHANGED: Interface Ethernet0/0, changed state to administratively down
+*Mar  1 00:00:14.095: %LINK-5-CHANGED: Interface Ethernet0/1, changed state to administratively down
+*Mar  1 00:00:14.103: %LINK-5-CHANGED: Interface Ethernet0/2, changed state to administratively down
+*Mar  1 00:00:14.111: %LINK-5-CHANGED: Interface Ethernet0/3, changed state to administratively down 2021-11-30 17:00:15 Jse3kQMKZwZifkJW
+R4#
+R4#
+R4#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+R4(config)#interface ethernet 0/1
+R4(config-if)#ip address 192.168.10.2 255.255.255.252
+R4(config-if)#no shutdown
+R4(config-if)#interface
+*Mar  1 00:12:54.263: %LINK-3-UPDOWN: Interface Ethernet0/1, changed state to up
+*Mar  1 00:12:55.263: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/1, changed state to up
+R4(config-if)#interface ethernet 0/2
+R4(config-if)#ip address 192.168.10.17 255.255.255.252
+R4(config-if)#no shutdown
+R4(config-if)#
+*Mar  1 00:13:22.871: %LINK-3-UPDOWN: Interface Ethernet0/2, changed state to up
+*Mar  1 00:13:23.871: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/2, changed state to up
+R4(config-if)#interface ethernet 0/3
+R4(config-if)#ip address 192.168.10.14 255.255.255.252
+R4(config-if)#no shutdown
+R4(config-if)#
+*Mar  1 00:13:59.487: %LINK-3-UPDOWN: Interface Ethernet0/3, changed state to up
+*Mar  1 00:14:00.487: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/3, changed state to up
+R4(config-if)#interface loopback 4
+R4(config-if)#ip add
+*Mar  1 00:14:11.015: %LINEPROTO-5-UPDOWN: Line protocol on Interface Loopback4, changed state to up
+R4(config-if)#ip address 192.168.0.4 255.255.255.255
+R4(config-if)#no shutdown
+R4(config-if)#do show cdp neighbors
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+R2               Eth 0/1            125        R S I      3640      Eth 0/1
+R3               Eth 0/3            166        R S I      3640      Eth 0/3
+R5               Eth 0/2            145        R S I      3640      Eth 0/2
+R4(config-if)#do show ip route
+Codes: C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route
+
+Gateway of last resort is not set
+
+     192.168.10.0/30 is subnetted, 3 subnets
+C       192.168.10.0 is directly connected, Ethernet0/1
+C       192.168.10.12 is directly connected, Ethernet0/3
+C       192.168.10.16 is directly connected, Ethernet0/2
+     192.168.0.0/32 is subnetted, 1 subnets
+C       192.168.0.4 is directly connected, Loopback4
+R4(config-if)#router ospf 1
+R4(config-router)#network exit
+                          ^
+% Invalid input detected at '^' marker.
+
+R4(config-router)#exit
+R4(config)#exit
+R4#
+*Mar  1 00:55:11.655: %SYS-5-CONFIG_I: Configured from console by console
+R4#configure replace nvram:startup-config
+This will apply all necessary additions and deletions
+to replace the current running configuration with the
+contents of the specified configuration file, which is
+assumed to be a complete configuration, not a partial
+configuration. Enter Y if you are sure you want to proceed. ? [no]: Y
+Overwriting with a file sized 50% or less than running config's. Proceed? [no]:
+*Mar  1 00:55:43.087: Rollback:Acquired Configuration lock.
+Y
+Smart-init will be enabled upon reload.
+
+The rollback configlet from the last pass is listed below:
+********
+
+!List of Commands:
+default service timestamps debug uptime
+default service timestamps log uptime
+default service password-encryption
+no boot-start-marker
+
+no boot-end-marker
+
+default ip cef
+no ip tcp synwait-time 5
+interface Ethernet0/0
+ no half-duplex
+interface Ethernet0/1
+ no half-duplex
+interface Ethernet0/2
+ no half-duplex
+interface Ethernet0/3
+ no half-duplex
+default ip http server
+no ip forward-protocol nd
+ --More--
+%LINK-5-CHANGED: Interface Loopback4, changed state to administratively down
+%LINK-3-UPDOWN: Interface Ethernet0/0, changed state to up
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Loopback4, changed state to down
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/0, changed state to up
+no banner motd
+line vty 0 4
+ no login
+banner motd # 2021-11-30 17:00:15 Jse3kQMKZwZifkJW #
+ip tcp synwait 5
+line con 0
+ no login
+line aux 0
+ no login
+end
+********
+
+
+Rollback aborted after 5 passes
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+%PARSER-3-CONFIGNOTLOCKED: Unlock requested by process '32'. Configuration not locked.
+R4#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+R4(config)#interface ethernet 0/1
+R4(config-if)#ip address 192.168.10.2 255.255.255.252
+R4(config-if)#no shutdown
+R4(config-if)#interface ethernet 0/2
+R4(config-if)#ip address 192.168.10.17 255.255.255.232
+Bad mask 0xFFFFFFE8 for address 192.168.10.17
+R4(config-if)#ip address 192.168.10.17 255.255.255.252
+R4(config-if)#no shutdown
+R4(config-if)#interface ethernet 0/3
+R4(config-if)#ip address 192.168.10.14 255.255.255.252
+R4(config-if)#no shutdown
+R4(config-if)#interface Loopback0
+R4(config-if)#ip a
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Loopback0, changed state to up
+R4(config-if)#ip address 192.168.0.4 255.255.255.255
+R4(config-if)#do show IP int brief
+Interface                  IP-Address      OK? Method Status                Protocol
+Ethernet0/0                unassigned      YES unset  up                    up
+Ethernet0/1                192.168.10.2    YES manual up                    up
+Ethernet0/2                192.168.10.17   YES manual up                    up
+Ethernet0/3                192.168.10.14   YES manual up                    up
+Loopback0                  192.168.0.4     YES manual up                    up
+R4(config-if)#do show cdp neighbors
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+R2               Eth 0/1            173        R S I      3640      Eth 0/1
+R3               Eth 0/3            145        R S I      3640      Eth 0/3
+R5               Eth 0/2            173        R S I      3640      Eth 0/2
+R4(config-if)#do show ip route
+Codes: C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route
+
+Gateway of last resort is not set
+
+     192.168.10.0/30 is subnetted, 3 subnets
+C       192.168.10.0 is directly connected, Ethernet0/1
+C       192.168.10.12 is directly connected, Ethernet0/3
+C       192.168.10.16 is directly connected, Ethernet0/2
+     192.168.0.0/32 is subnetted, 1 subnets
+C       192.168.0.4 is directly connected, Loopback0
+R4(config-if)#router ospf
+% Incomplete command.
+
+R4(config)#router ospf 1
+R4(config-router)#network 192.168.10.2 0.0.0.3 area 0
+R4(config-router)#network 192.168
+%OSPF-5-ADJCHG: Process 1, Nbr 192.168.0.2 on Ethernet0/1 from LOADING to FULL, Loading Done
+R4(config-router)#network 192.168.10.17 0.0.0.3 area 0
+R4(config-router)#network 192.168.10.14 0.0.0.3 area 0
+R4(config-router)#network 192.168.0.4
+%OSPF-5-ADJCHG: Process 1, Nbr 192.168.0.3 on Ethernet0/3 from LOADING to FULL, Loading Done
+R4(config-router)#network 192.168.0.4 0.0.0.0 area 0
+R4(config-router)#
+%OSPF-5-ADJCHG: Process 1, Nbr 192.168.0.5 on Ethernet0/2 from LOADING to FULL, Loading Done
+R4(config-router)#do show ip ospf
+ Routing Process "ospf 1" with ID 192.168.0.4
+ Start time: 01:15:12.236, Time elapsed: 00:07:14.800
+ Supports only single TOS(TOS0) routes
+ Supports opaque LSA
+ Supports Link-local Signaling (LLS)
+ Supports area transit capability
+ Router is not originating router-LSAs with maximum metric
+ Initial SPF schedule delay 5000 msecs
+ Minimum hold time between two consecutive SPFs 10000 msecs
+ Maximum wait time between two consecutive SPFs 10000 msecs
+ Incremental-SPF disabled
+ Minimum LSA interval 5 secs
+ Minimum LSA arrival 1000 msecs
+ LSA group pacing timer 240 secs
+ Interface flood pacing timer 33 msecs
+ Retransmission pacing timer 66 msecs
+ Number of external LSA 0. Checksum Sum 0x000000
+ Number of opaque AS LSA 0. Checksum Sum 0x000000
+ Number of DCbitless external and opaque AS LSA 0
+ Number of DoNotAge external and opaque AS LSA 0
+ Number of areas in this router is 1. 1 normal 0 stub 0 nssa
+ Number of areas transit capable is 0
+ External flood list length 0
+    Area BACKBONE(0)
+        Number of interfaces in this area is 4 (1 loopback)
+        Area has no authentication
+        SPF algorithm last executed 00:04:27.348 ago
+        SPF algorithm executed 10 times
+        Area ranges are
+        Number of LSA 11. Checksum Sum 0x057439
+        Number of opaque link LSA 0. Checksum Sum 0x000000
+        Number of DCbitless LSA 0
+        Number of indication LSA 0
+        Number of DoNotAge LSA 0
+        Flood list length 0
+
+R4(config-router)#
+R4(config-router)#
+R4(config-router)#do show ip route
+Codes: C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route
+
+Gateway of last resort is not set
+
+     192.168.10.0/30 is subnetted, 5 subnets
+C       192.168.10.0 is directly connected, Ethernet0/1
+O       192.168.10.4 [110/20] via 192.168.10.13, 00:04:43, Ethernet0/3
+                     [110/20] via 192.168.10.1, 00:04:43, Ethernet0/1
+O       192.168.10.8 [110/20] via 192.168.10.18, 00:04:43, Ethernet0/2
+                     [110/20] via 192.168.10.13, 00:04:43, Ethernet0/3
+C       192.168.10.12 is directly connected, Ethernet0/3
+C       192.168.10.16 is directly connected, Ethernet0/2
+     192.168.11.0/30 is subnetted, 1 subnets
+O       192.168.11.0 [110/20] via 192.168.10.1, 00:04:44, Ethernet0/1
+     192.168.0.0/32 is subnetted, 5 subnets
+O       192.168.0.1 [110/21] via 192.168.10.1, 00:04:44, Ethernet0/1
+O       192.168.0.2 [110/11] via 192.168.10.1, 00:04:44, Ethernet0/1
+O       192.168.0.3 [110/11] via 192.168.10.13, 00:04:45, Ethernet0/3
+C       192.168.0.4 is directly connected, Loopback0
+O       192.168.0.5 [110/11] via 192.168.10.18, 00:04:45, Ethernet0/2
+R4(config-router)#
+R4(config-router)#
+R4(config-router)#
+R4(config-router)#
+R4(config-router)#
+R4(config-router)#
+%OSPF-5-ADJCHG: Process 1, Nbr 192.168.0.2 on Ethernet0/1 from LOADING to FULL, Loading Done
+R4(config-router)#interface ethernet 0/2
+R4(config-if)#ip ospf network point-to-point
+R4(config-if)#
+%OSPF-5-ADJCHG: Process 1, Nbr 192.168.0.5 on Ethernet0/2 from FULL to DOWN, Neighbor Down: Interface down or detached
+%OSPF-5-ADJCHG: Process 1, Nbr 192.168.0.5 on Ethernet0/2 from LOADING to FULL, Loading Done
+R4(config-if)#interface ethernet 0/1
+R4(config-if)#ip ospf network point-to-point
+R4(config-if)#
+%OSPF-5-ADJCHG: Process 1, Nbr 192.168.0.2 on Ethernet0/1 from FULL to DOWN, Neighbor Down: Interface down or detached
+%OSPF-5-ADJCHG: Process 1, Nbr 192.168.0.2 on Ethernet0/1 from LOADING to FULL, Loading Done
+R4(config-if)#
+%OSPF-5-ADJCHG: Process 1, Nbr 192.168.0.5 on Ethernet0/2 from LOADING to FULL, Loading Done
+R4(config-if)#ping 192.168.11.1
+               ^
+% Invalid input detected at '^' marker.
+
+R4(config-if)#exit
+R4(config)#exit
+R4#Y
+%SYS-5-CONFIG_I: Configured from console by console
+R4#ping 192.168.11.1
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 192.168.11.1, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 32/40/44 ms
+R4#traceroute 192.168.11.1
+
+Type escape sequence to abort.
+Tracing the route to 192.168.11.1
+
+  1 192.168.10.1 12 msec 16 msec 20 msec
+  2 192.168.11.1 56 msec 40 msec 40 msec
+R4#ping 192.168.11.1
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 192.168.11.1, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 36/40/44 ms
+R4#traceroute 192.168.11.1
+
+Type escape sequence to abort.
+Tracing the route to 192.168.11.1
+
+  1 192.168.10.1 12 msec 12 msec 24 msec
+  2 192.168.11.1 48 msec 40 msec 40 msec
+R4#show ip ospf interface brief
+Interface    PID   Area            IP Address/Mask    Cost  State Nbrs F/C
+Lo0          1     0               192.168.0.4/32     1     LOOP  0/0
+Et0/3        1     0               192.168.10.14/30   10    BDR   1/1
+Et0/2        1     0               192.168.10.17/30   10    P2P   1/1
+Et0/1        1     0               192.168.10.2/30    10    P2P   1/1
+R4#show interface
+Ethernet0/0 is up, line protocol is up
+  Hardware is AmdP2, address is cc00.2c0b.0000 (bia cc00.2c0b.0000)
+  MTU 1500 bytes, BW 10000 Kbit/sec, DLY 1000 usec,
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive set (10 sec)
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input never, output never, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/40 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     0 packets input, 0 bytes, 0 no buffer
+     Received 0 broadcasts, 0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 input packets with dribble condition detected
+     695 packets output, 69628 bytes, 0 underruns
+     0 output errors, 0 collisions, 11 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier
+     0 output buffer failures, 0 output buffers swapped out
+Ethernet0/1 is up, line protocol is up
+  Hardware is AmdP2, address is cc00.2c0b.0001 (bia cc00.2c0b.0001)
+  Internet address is 192.168.10.2/30
+  MTU 1500 bytes, BW 10000 Kbit/sec, DLY 1000 usec,
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive set (10 sec)
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input 00:00:00, output 00:00:01, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/40 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     861 packets input, 115288 bytes, 0 no buffer
+     Received 833 broadcasts, 0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 input packets with dribble condition detected
+     1569 packets output, 154979 bytes, 0 underruns
+     0 output errors, 0 collisions, 1 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier
+     0 output buffer failures, 0 output buffers swapped out
+
+R4#
+R4#show IP interface print
+                      ^
+% Invalid input detected at '^' marker.
+
+R4#show IP interface brief
+Interface                  IP-Address      OK? Method Status                Protocol
+Ethernet0/0                unassigned      YES unset  up                    up
+Ethernet0/1                192.168.10.2    YES manual up                    up
+Ethernet0/2                192.168.10.17   YES manual up                    up
+Ethernet0/3                192.168.10.14   YES manual up                    up
+Loopback0                  192.168.0.4     YES manual up                    up
+R4#interface ethernet 0/0
+    ^
+% Invalid input detected at '^' marker.
+
+R4#shutdown
+Translating "shutdown"
+
+Translating "shutdown"
+% Unknown command or computer name, or unable to find computer address
+R4#config
+Configuring from terminal, memory, or network [terminal]? t
+Enter configuration commands, one per line.  End with CNTL/Z.
+R4(config)#interface ethernet 0/0
+R4(config-if)#shutdown
+R4(config-if)#
+%LINK-5-CHANGED: Interface Ethernet0/0, changed state to administratively down
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/0, changed state to down
+R4(config-if)#exit
+R4(config)#exit
+R4#t
+%SYS-5-CONFIG_I: Configured from console by console
+R4#ping 192.168.11.1
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 192.168.11.1, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 32/37/40 ms
+R4#show ip ospf interface brief
+Interface    PID   Area            IP Address/Mask    Cost  State Nbrs F/C
+Lo0          1     0               192.168.0.4/32     1     LOOP  0/0
+Et0/3        1     0               192.168.10.14/30   10    BDR   1/1
+Et0/2        1     0               192.168.10.17/30   10    P2P   1/1
+Et0/1        1     0               192.168.10.2/30    10    P2P   1/1
+R4#show IP interface brief
+Interface                  IP-Address      OK? Method Status                Protocol
+Ethernet0/0                unassigned      YES unset  administratively down down
+Ethernet0/1                192.168.10.2    YES manual up                    up
+Ethernet0/2                192.168.10.17   YES manual up                    up
+Ethernet0/3                192.168.10.14   YES manual up                    up
+Loopback0                  192.168.0.4     YES manual up                    up
+R4#ping 192.168.11.1
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 192.168.11.1, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 36/40/44 ms
+R4#show IP interface brief
+Interface                  IP-Address      OK? Method Status                Protocol
+Ethernet0/0                unassigned      YES unset  administratively down down
+Ethernet0/1                192.168.10.2    YES manual up                    up
+Ethernet0/2                192.168.10.17   YES manual up                    up
+Ethernet0/3                192.168.10.14   YES manual up                    up
+Loopback0                  192.168.0.4     YES manual up                    up
+R4#show ip ospf interface brief
+Interface    PID   Area            IP Address/Mask    Cost  State Nbrs F/C
+Lo0          1     0               192.168.0.4/32     1     LOOP  0/0
+Et0/3        1     0               192.168.10.14/30   10    BDR   1/1
+Et0/2        1     0               192.168.10.17/30   10    P2P   1/1
+Et0/1        1     0               192.168.10.2/30    10    P2P   1/1
+R4#show interface
+Ethernet0/0 is administratively down, line protocol is down
+  Hardware is AmdP2, address is cc00.2c0b.0000 (bia cc00.2c0b.0000)
+  MTU 1500 bytes, BW 10000 Kbit/sec, DLY 1000 usec,
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive set (10 sec)
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input never, output never, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/40 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     0 packets input, 0 bytes, 0 no buffer
+     Received 0 broadcasts, 0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 input packets with dribble condition detected
+     703 packets output, 70383 bytes, 0 underruns
+     0 output errors, 0 collisions, 11 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier
+     0 output buffer failures, 0 output buffers swapped out
+Ethernet0/1 is up, line protocol is up
+  Hardware is AmdP2, address is cc00.2c0b.0001 (bia cc00.2c0b.0001)
+  Internet address is 192.168.10.2/30
+  MTU 1500 bytes, BW 10000 Kbit/sec, DLY 1000 usec,
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive set (10 sec)
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input 00:00:08, output 00:00:02, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/40 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     915 packets input, 122074 bytes, 0 no buffer
+     Received 877 broadcasts, 0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 input packets with dribble condition detected
+     1661 packets output, 164062 bytes, 0 underruns
+     0 output errors, 0 collisions, 1 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier
+     0 output buffer failures, 0 output buffers swapped out
+Ethernet0/2 is up, line protocol is up
+  Hardware is AmdP2, address is cc00.2c0b.0002 (bia cc00.2c0b.0002)
+  Internet address is 192.168.10.17/30
+  MTU 1500 bytes, BW 10000 Kbit/sec, DLY 1000 usec,
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive set (10 sec)
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input 00:00:02, output 00:00:06, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/40 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     716 packets input, 104287 bytes, 0 no buffer
+     Received 708 broadcasts, 0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 input packets with dribble condition detected
+     1606 packets output, 158614 bytes, 0 underruns
+     0 output errors, 0 collisions, 1 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier
+     0 output buffer failures, 0 output buffers swapped out
+Ethernet0/3 is up, line protocol is up
+  Hardware is AmdP2, address is cc00.2c0b.0003 (bia cc00.2c0b.0003)
+  Internet address is 192.168.10.14/30
+  MTU 1500 bytes, BW 10000 Kbit/sec, DLY 1000 usec,
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive set (10 sec)
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input 00:00:06, output 00:00:05, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/40 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     855 packets input, 116256 bytes, 0 no buffer
+     Received 850 broadcasts, 0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 input packets with dribble condition detected
+     1618 packets output, 159589 bytes, 0 underruns
+     0 output errors, 0 collisions, 1 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier
+     0 output buffer failures, 0 output buffers swapped out
+Loopback0 is up, line protocol is up
+  Hardware is Loopback
+  Internet address is 192.168.0.4/32
+  MTU 1514 bytes, BW 8000000 Kbit/sec, DLY 5000 usec,
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation LOOPBACK, loopback not set
+  Last input never, output never, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/0 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     0 packets input, 0 bytes, 0 no buffer
+     Received 0 broadcasts, 0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+     0 packets output, 0 bytes, 0 underruns
+     0 output errors, 0 collisions, 0 interface resets
+     0 unknown protocol drops
+     0 output buffer failures, 0 output buffers swapped out
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#config
+Configuring from terminal, memory, or network [terminal]? t
+Enter configuration commands, one per line.  End with CNTL/Z.
+R4(config)#interface e0/1
+R4(config-if)#ip ospf cost 100
+R4(config-if)#exit
+R4(config)#do show ip ospf interface brief
+Interface    PID   Area            IP Address/Mask    Cost  State Nbrs F/C
+Lo0          1     0               192.168.0.4/32     1     LOOP  0/0
+Et0/3        1     0               192.168.10.14/30   10    BDR   1/1
+Et0/2        1     0               192.168.10.17/30   10    P2P   1/1
+Et0/1        1     0               192.168.10.2/30    100   P2P   1/1
+R4(config)#exit
+R4#config
+%SYS-5-CONFIG_I: Configured from console by console
+R4#ping 192.168.11.1
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 192.168.11.1, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 40/61/72 ms
+R4#traceroute 192.168.11.1
+
+Type escape sequence to abort.
+Tracing the route to 192.168.11.1
+
+  1 192.168.10.13 20 msec 12 msec 28 msec
+  2 192.168.10.5 40 msec 40 msec 44 msec
+  3 192.168.11.1 40 msec 56 msec 72 msec
+R4#show running-config
+Building configuration...
+
+Current configuration : 1258 bytes
+!
+version 12.4
+no service timestamps debug uptime
+no service timestamps log uptime
+no service password-encryption
+!
+hostname R4
+!
+boot-start-marker
+boot-end-marker
+!
+!
+no aaa new-model
+no ip icmp rate-limit unreachable
+!
+!
+no ip cef
+no ip domain lookup
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+ip tcp synwait-time 5
+!
+!
+!
+interface Loopback0
+ ip address 192.168.0.4 255.255.255.255
+!
+interface Ethernet0/0
+ no ip address
+ shutdown
+ half-duplex
+!
+interface Ethernet0/1
+ ip address 192.168.10.2 255.255.255.252
+ ip ospf network point-to-point
+ ip ospf cost 100
+ half-duplex
+!
+interface Ethernet0/2
+ ip address 192.168.10.17 255.255.255.252
+ ip ospf network point-to-point
+ half-duplex
+!
+interface Ethernet0/3
+ ip address 192.168.10.14 255.255.255.252
+ half-duplex
+!
+!
+router ospf 1
+ log-adjacency-changes
+ network 192.168.0.4 0.0.0.0 area 0
+ network 192.168.10.0 0.0.0.3 area 0
+ network 192.168.10.12 0.0.0.3 area 0
+ network 192.168.10.16 0.0.0.3 area 0
+!
+no ip http server
+no ip forward-protocol nd
+!
+!
+!
+!
+!
+!
+control-plane
+!
+!
+!
+!
+!
+!
+!
+!
+banner motd ^C 2021-11-30 17:00:15 Jse3kQMKZwZifkJW ^C
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+line vty 0 4
+ no login
+!
+!
+end
+
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
+R4#
